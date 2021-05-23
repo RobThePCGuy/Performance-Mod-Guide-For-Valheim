@@ -1,15 +1,20 @@
 # Performance Mod Guide For Valheim
 
 
-*The following are techniques from many online sources. I've combined them into one document for your reading pleasure. A guide to help you edit Valheim and Windows files.* 
+*The following are techniques from many online sources. I've combined them into one document for your reading pleasure. A guide to help you edit Valheim and Windows files.*
+
 **If this induces apprehension then I recommend going back to watching Puppy Dog Pals.**
+
 *This is a work-in-progress document. I am not responsible if you fail to show up for work/school, forget to pick up milk, or your PC spontaneously explodes.*
 
 # Increase Performance
 
 ## High Priority Mode
+
 *Here we will create a command shortcut that will launch Valheim in High Priority from Steam.*
+
 **What is High Priority?** 
+
 *In Windows, the OS distributes the computer's resources automaticly depending on the application's priority.* **Higher priority means more resources will go to Valheim.**
 
 ### Browse to the Valheim Directory
