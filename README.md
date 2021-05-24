@@ -1,9 +1,11 @@
 # Performance Mod Guide For Valheim
 *The following are techniques I’ve combined from many online sources into one document for your reading pleasure. A guide to help you edit Valheim and Windows files.*
+
 **If this induces apprehension, then I recommend going back to watching Puppy Dog Pals.**
 # Increase Performance
 ## High Priority Mode
 *Here we will create a command shortcut that will launch Valheim in High Priority from Steam.*
+
 **What is High Priority?** 
 *In Windows, the OS distributes the computer’s resources depending on the application’s priority.* **Higher priority means more resources will go to Valheim.**
 ### Browse to the Valheim Directory
@@ -11,6 +13,7 @@
 C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
 - Right-Click on **valheim.exe**
+
 *If you don’t see* **valheim.exe** *but see* **valheim** *It means **Hidden Items** are not being displayed. Look for Application in the column next to it, that’ll be our .exe.*
 - Select **Create shortcut** and rename it to **valheim**
 ### Create a Command Shortcut
@@ -90,6 +93,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\InSlimVML\Mods
 - The [webpage](https://www.nexusmods.com/valheim/mods/categories/10/) that opened will have a search bar at the top.
 - Enter my username [RobsDAPCGuy](https://www.nexusmods.com/valheim/users/70149208?tab%3Duser%2Bfiles=&tab=user+files)
 - Then change the category from **Mods to Users** and click **Search**
+
 *Choose my mods or search for other construction mods within Nexus.*
 - Select a mod from the list.
 - Click on **Manual to the right**
@@ -116,19 +120,26 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 | -window-mode (exclusive or borderless) | Overrides full-screen windowing mode | Yes |
 | -popupwindow | A window without a frame. | No |
 | -force-d3d9 | Run a game using DirectX 9 | Not sure. Need testers. |
+
 *Not using Steam Launch Options? Try this in the Target*
 ```sh
 cmd.exe /c start “Valheim” /high C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive -screen-fullscreen
 ```
 # Edits - Sources - Thanks
-Thank [Reddit user RustyB3ans for the boot.config fixes](https://www.reddit.com/user/RustyB3ans/)
---------------------------------------------------------------------------
-I combined two posts to make the auto high priority fix. Reddit user [1000AngryTrashBees](https://www.reddit.com/user/1000AngryTrashBees/) and Reddit user [DerBoeseWolf](https://www.reddit.com/user/DerBoeseWolf/)
---------------------------------------------------------------------------
-Launch Options I paraphrased from the [Unity Guide](https://docs.unity3d.com/Manual/CommandLineArguments.html)
---------------------------------------------------------------------------
-Here is my email if you wish to ask about something else.
+*Thank [Reddit user RustyB3ans for the boot.config fixes](https://www.reddit.com/user/RustyB3ans/)*
+
+*I combined two posts to make the auto high priority fix. Reddit user [1000AngryTrashBees](https://www.reddit.com/user/1000AngryTrashBees/) and Reddit user [DerBoeseWolf](https://www.reddit.com/user/DerBoeseWolf/)*
+
+*Launch Options I paraphrased from the [Unity Guide](https://docs.unity3d.com/Manual/CommandLineArguments.html)*
+
+*Here is my email if you wish to ask about something else.*
+
 [rob@zero-one-zero.com](mailto:rob@zero-one-zero.com)
+
+**If you like this guide consider buying me a coffee.**
+
+[![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DRobThePCGuy%26type%3Dpatrons&style=for-the-badge)](https://patreon.com/RobThePCGuy)
+
 | Mods I Use |
 | ---------- |
 | RememberIPDamnit |
@@ -148,6 +159,7 @@ Here is my email if you wish to ask about something else.
 | More Slots |
 | Improved Build HUD |
 | Faster Teleportation |
+
 | Texture Pack |
 | ------------ |
 | Badgers 2k Re-Texture |
