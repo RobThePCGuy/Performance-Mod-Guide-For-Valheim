@@ -7,7 +7,7 @@
 
 **If this induces apprehension, then I recommend going back to watching Puppy Dog Pals.**
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/boot.config2-.jpg?raw=true)
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/image2.jpg?raw=true)
 
 # Increase Performance
 ## High Priority Mode
