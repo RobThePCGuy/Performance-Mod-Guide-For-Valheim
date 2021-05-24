@@ -3,27 +3,32 @@
 [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DRobThePCGuy%26type%3Dpatrons&style=for-the-badge)](https://patreon.com/RobThePCGuy)
 
 # Performance Mod Guide For Valheim
-*The following are techniques I’ve combined from many online sources into one document for your reading pleasure. A guide to help you edit Valheim and Windows files.*
+*I have compiled the techniques listed below from a variety of online sources into a single document for your reading pleasure. A how-to-guide for editing Valheim and Windows files.*
 
 **If this induces apprehension, then I recommend going back to watching Puppy Dog Pals.**
+
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/boot.config2-.jpg?raw=true)
+
 # Increase Performance
 ## High Priority Mode
-*Here we will create a command shortcut that will launch Valheim in High Priority from Steam.*
+*In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.*
 
 **What is High Priority?** 
-*In Windows, the OS distributes the computer’s resources depending on the application’s priority.* **Higher priority means more resources will go to Valheim.**
-### Browse to the Valheim Directory
+*In Windows, the operating system distributes the computer’s resources based on the priority of the application.* **Higher priority means more resources will go to Valheim.**
+### Navigate to the Valheim Directory.
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
 - Right-Click on **valheim.exe**
+- 
+*If you don't see **valheim.exe** but do see **valheim**, it means that **Hidden Items** aren't being displayed. Look for Application in the column next to it; this is where we'll find our.exe.*
 
-*If you don’t see* **valheim.exe** *but see* **valheim** *It means **Hidden Items** are not being displayed. Look for Application in the column next to it, that’ll be our .exe.*
 - Select **Create shortcut** and rename it to **valheim**
 ### Create a Command Shortcut
-- **Right-Click** on the valheim shortcut and select **properties**
+- **Right-click** the valheim shortcut and choose **properties**
 - Click in the **Target** field. Use the arrow keys to move the cursor to the start.
-- Leave the original text typing the following before it.
+- Leave the original text alone, but type the following before it.
+
 ```sh
 cmd.exe /c start “Valheim” /high 
 ```
@@ -59,7 +64,7 @@ scripting-runtime-version=latest
 ```
 - Save and close Notepad.
 # Modding Valheim
-*Modding Valheim is not without risks. Be aware updates may cause mods to load incorrectly and cause Valheim to not run at all. If your game will not load. Rename the Valheim directory to “Valheim.bak” and Verify Files in Steam.*
+*Modding Valheim is fraught with danger. Be aware that updates may cause mods to load incorrectly and Valheim to crash. If your game isn't loading. Rename the Valheim directory to **Valheim.bak** and run Steam's File Verification.*
 ## Preparing Files for Install
 ### BepInEx for Valheim
 - Go to [Link to BepInEx](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
