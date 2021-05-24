@@ -20,7 +20,7 @@
 C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
 - Right-Click on **valheim.exe**
-- 
+
 *If you don't see **valheim.exe** but do see **valheim**, it means that **Hidden Items** aren't being displayed. Look for Application in the column next to it; this is where we'll find our.exe.*
 
 - Select **Create shortcut** and rename it to **valheim**
