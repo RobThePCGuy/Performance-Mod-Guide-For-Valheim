@@ -25,7 +25,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim
 
 - Select **Create shortcut** and rename it to **valheim**
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/shortcut1.JPG?raw=true)
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-1.jpg?raw=true)
 
 ### Create a Command Shortcut
 - **Right-click** the valheim shortcut and choose **properties**
@@ -39,7 +39,7 @@ cmd.exe /c start “Valheim” /high
 ```sh
 cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe"
 ```
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/shortcut2.JPG?raw=true)
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-2.jpg?raw=true)
 
 - Click **OK** when finished.
 - **SHIFT+Right-Click** on the valheim shortcut
@@ -53,9 +53,9 @@ cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\
 ```sh
 "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen
 ```
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/shortcut3.JPG?raw=true)
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-3.jpg?raw=true)
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/shortcut4.JPG?raw=true)
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-4.jpg?raw=true)
 
 ## Modify boot.config
 *Enables the* **GPU [Graphics Processing Unit]** *to take on more jobs lightening the load on the* **CPU [Central Processing Unit]**
