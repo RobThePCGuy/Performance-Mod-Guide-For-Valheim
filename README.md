@@ -25,7 +25,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim
 
 - Select **Create shortcut** and rename it to **valheim**
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/shortcut1.jpg?raw=true)
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/shortcut1.JPG?raw=true)
 
 ### Create a Command Shortcut
 - **Right-click** the valheim shortcut and choose **properties**
