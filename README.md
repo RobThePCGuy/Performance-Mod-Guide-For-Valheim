@@ -33,7 +33,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim
 - Leave the original text alone, but type the following before it.
 
 ```sh
-cmd.exe /c start “Valheim” /high 
+cmd.exe /c start "Valheim" /high  
 ```
 - Here is the full **Target** for your reference.
 ```sh
@@ -141,7 +141,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 
 *Not using Steam Launch Options? Try this in the Target*
 ```sh
-cmd.exe /c start “Valheim” /high C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive -screen-fullscreen
+cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive -screen-fullscreen
 ```
 # Edits - Sources - Thanks
 *Thank [Reddit user RustyB3ans for the boot.config fixes](https://www.reddit.com/user/RustyB3ans/)*
