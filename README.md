@@ -33,7 +33,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim
 - Leave the original text alone, but type the following before it.
 
 ```sh
-cmd.exe /c start "Valheim" /high  
+cmd.exe /c start "Valheim" /high 
 ```
 - Here is the full **Target** for your reference.
 ```sh
