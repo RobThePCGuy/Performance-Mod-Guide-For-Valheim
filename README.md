@@ -1,6 +1,4 @@
-## If you enjoyed this guide, consider supporting the cause on Patreon or buy me a $1 coffee via PayPal.
-
-[![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DRobThePCGuy&style=for-the-badge)](https://patreon.com/RobThePCGuy)
+### If you enjoyed this guide, consider buying me a $1 coffee!
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge&logo=appveyor)](https://www.paypal.com/donate?hosted_button_id=KCNTBC9GGPR2U)
 
