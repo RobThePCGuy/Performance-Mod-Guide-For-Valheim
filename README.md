@@ -1,33 +1,37 @@
-**If you like this guide consider buying me a coffee.**
+## If you enjoyed this guide, consider supporting the cause on Patreon.
 
 [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DRobThePCGuy%26type%3Dpatrons&style=for-the-badge)](https://patreon.com/RobThePCGuy)
 
 # Performance Mod Guide For Valheim
-*I have compiled the techniques listed below from a variety of online sources into a single document for your reading pleasure. A how-to-guide for editing Valheim and Windows files.*
 
-**If this induces apprehension, then I recommend going back to watching Puppy Dog Pals.**
+**You have stumbled onto my How-to-Guide for editing Valheim and Windows files.**
+
+**If this induces apprehension, then I recommend going back to watching Puppy Dog Pals**
 
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/image2.jpg?raw=true)
 
 # Increase Performance
 ## High Priority Mode
-*In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.*
+**In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.**
 
-**What is High Priority?** 
-*In Windows, the operating system distributes the computer’s resources based on the priority of the application.* **Higher priority means more resources will go to Valheim.**
+> **What is High Priority?** 
+> *In Windows, the operating system distributes the computer’s resources based on the priority of the application.* 
+> **Higher priority means more resources will go to Valheim.**
+
 ### Navigate to the Valheim Directory.
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
 - Right-Click on **valheim.exe**
 
-*If you don't see **valheim.exe** but do see **valheim**, it means that **Hidden Items** aren't being displayed. Look for Application in the column next to it; this is where we'll find our.exe.*
+> *If you don't see **valheim.exe** but do see **valheim**, it means that **Hidden Items** aren't being displayed. 
+> Look for **Application** in the column next to it; this is where we'll find our **.exe**.*
 
 - Select **Create shortcut** and rename it to **valheim**
 
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-1.jpg?raw=true)
 
-### Create a Command Shortcut
+## Create a Command Shortcut
 - **Right-click** the valheim shortcut and choose **properties**
 - Click in the **Target** field. Use the arrow keys to move the cursor to the start.
 - Leave the original text alone, but type the following before it.
@@ -39,13 +43,18 @@ cmd.exe /c start "Valheim" /high
 ```sh
 cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe"
 ```
+
+> The “/c” instructs the command prompt to execute whatever we type after it and then close. 
+> Unlike a "/k", which would leave the window open.
+
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-2.jpg?raw=true)
 
 - Click **OK** when finished.
 - **SHIFT+Right-Click** on the valheim shortcut
 - Select **Copy as path**
-- Open Steam and paste the clipboard contents into the Valheim Launch Options.
-- Leave the original text typing the following after it.
+- In Steam, paste the clipboard contents into the **Valheim Launch Options**.
+- Leave the pasted text alone and type the following after it. Ensuring to leave a space between the two.
+
 ```sh
  %command% -window-mode exclusive -screen-fullscreen
 ```
@@ -57,23 +66,35 @@ cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\
 
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-4.jpg?raw=true)
 
+> After launch you can verify that **valheim.exe** now has a **High** Base priority.
+
 ## Modify boot.config
-*Enables the* **GPU [Graphics Processing Unit]** *to take on more jobs lightening the load on the* **CPU [Central Processing Unit]**
-- Open Steam, **Right-Click** on Valheim, go to **Manage--->Browse local files**
-- Explorer should have opened. Go into the **valheim_Data** directory.
+
+> The file edited In this section, will allow the **GPU [Graphics Processing Unit]** to handle more tasks, reducing the load on the **CPU [Central Processing Unit]**.
+
+- In your Steam Library **Right-Click** on Valheim & go to **Manage--->Browse local files**
+- A Explorer window should open. 
+- Go into the **valheim_Data** directory.
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 ```
-- Find and edit the **boot.config** file using Notepad or Notepad++
+- Find and edit the **boot.config** file using Notepad or Notepad++.
+
+![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config1-.jpg?raw=true)
 - Add the following three lines to the **top** of the file leaving the original text.
 ```sh
 gfx-enable-gfx-jobs=1
 gfx-enable-native-gfx-jobs=1
 scripting-runtime-version=latest
 ```
+![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config2-.jpg?raw=true)
 - Save and close Notepad.
+
 # Modding Valheim
-*Modding Valheim is fraught with danger. Be aware that updates may cause mods to load incorrectly and Valheim to crash. If your game isn't loading. Rename the Valheim directory to **Valheim.bak** and run Steam's File Verification.*
+
+> *Modding Valheim is fraught with danger! Be aware that updates may cause mods to load incorrectly and Valheim to crash.
+> If your game isn't loading. Rename the Valheim directory to **Valheim.bak** and Verify Files.*
+
 ## Preparing Files for Install
 ### BepInEx for Valheim
 - Go to [Link to BepInEx](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
