@@ -90,22 +90,41 @@ scripting-runtime-version=latest
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.2.jpg?raw=true)
 - Save and close Notepad.
 
+
 # Modding Valheim
 
-> *Modding Valheim is fraught with danger! Be aware that updates may cause mods to load incorrectly and Valheim to crash.
-> If your game isn't loading. Rename the Valheim directory to **Valheim.bak** and Verify Files.*
+> Modding Valheim is fraught with danger! Be aware that updates may cause mods to load incorrectly and Valheim to crash.
+> If your game isn't loading. Rename the Valheim directory to **Valheim.bak** and Verify Files.
 
 ## Preparing Files for Install
-### BepInEx for Valheim
-- Go to [Link to BepInEx](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
-- Click **Manual Download** to download BepInExPack for Valheim.
-### Download BuildShare
-- Register or login to [Nexus](https://users.nexusmods.com/auth/sign_in)
-- Now go to the [BuildShare](https://www.nexusmods.com/valheim/mods/5)
+### BepInExPack Valheim
+
+> BepInExPack is a general-purpose framework for Unity modding. Enabling plugins that use **.dll** files.
+
+- Go to [Link to BepInExPack Valheim](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
+- Click **Manual Download** to download BepInExPack Valheim.
+
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true)
+### BuildShare
+
+> Allows for the saving and loading of constructions in the new **.vbuild** file format. 
+> SlimVML Mod Loader is required for it to function.
+
+- Register or login to [Link to Nexus](https://users.nexusmods.com/auth/sign_in)
+- Now go to the [Link to BuildShare](https://www.nexusmods.com/valheim/mods/5)
 - Select **Manual--->** *(Required Mod pop-up)* **--->Download--->Slow Download**
-### Download BepInEx SlimVML Loader
-- Go to [GitHub](https://github.com/BepInEx/BepInEx.SlimVML.Loader/releases/latest)
-- Under **assets** click on **SlimVML.Loader.dll**
+
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/Buildshare-1.jpg?raw=true)
+
+### BepInEx SlimVML Loader
+
+> This allows BuildShare to to function within the BepInEx Mod Framework.
+
+- Go to [Link to GitHub](https://github.com/BepInEx/BepInEx.SlimVML.Loader/releases/latest)
+- Under **Assets** click on **SlimVML.Loader.dll**
+
+![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/SlimVML.jpg?raw=true)
+
 ## Extracting and Copying Mod Files
 - Open Explorer and go to Downloads.
 ```sh
