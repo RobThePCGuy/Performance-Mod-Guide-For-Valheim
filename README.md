@@ -70,7 +70,7 @@ cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\
 
 ## Modify boot.config
 
-> The file edited In this section, will allow the **GPU [Graphics Processing Unit]** to handle more tasks, reducing the load on the **CPU [Central Processing Unit]**.
+> The file we will edit in this section enables the **GPU [Graphics Processing Unit]** to handle more tasks, reducing the load on the **CPU [Central Processing Unit]**.
 
 - In your Steam Library **Right-Click** on Valheim & go to **Manage--->Browse local files**
 - A Explorer window should open. 
@@ -78,7 +78,7 @@ cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 ```
-- Find and edit the **boot.config** file using Notepad or Notepad++.
+- Find and edit the **boot.config** file using [Notepad](https://www.howtogeek.com/672710/why-notepad-is-still-awesome-for-taking-notes/) or [Notepad++](https://notepad-plus-plus.org/).
 
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.1.jpg?raw=true)
 - Add the following three lines to the **top** of the file leaving the original text.
@@ -90,11 +90,10 @@ scripting-runtime-version=latest
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.2.jpg?raw=true)
 - Save and close Notepad.
 
-
 # Modding Valheim
 
 > Modding Valheim is fraught with danger! Be aware that updates may cause mods to load incorrectly and Valheim to crash.
-> If your game isn't loading. Rename the Valheim directory to **Valheim.bak** and Verify Files.
+> If your game isn't loading. Rename the Valheim directory to **Valheim.bak** and [Verify Files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) through Steam.
 
 ## Preparing Files for Install
 ### BepInExPack Valheim
@@ -104,7 +103,11 @@ scripting-runtime-version=latest
 - Go to [Link to BepInExPack Valheim](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
 - Click **Manual Download** to download BepInExPack Valheim.
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true)
+[![alt text][1]][2]
+
+[1]:  https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
+[2]:  https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/ "Redirect to homepage"
+
 ### BuildShare
 
 > Allows for the saving and loading of constructions in the new **.vbuild** file format. 
@@ -114,7 +117,7 @@ scripting-runtime-version=latest
 - Now go to the [Link to BuildShare](https://www.nexusmods.com/valheim/mods/5)
 - Select **Manual--->** *(Required Mod pop-up)* **--->Download--->Slow Download**
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/Buildshare-1.jpg?raw=true)
+![Required Mod pop-up](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/Buildshare-1.jpg?raw=true)
 
 ### BepInEx SlimVML Loader
 
@@ -123,7 +126,7 @@ scripting-runtime-version=latest
 - Go to [Link to GitHub](https://github.com/BepInEx/BepInEx.SlimVML.Loader/releases/latest)
 - Under **Assets** click on **SlimVML.Loader.dll**
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/SlimVML.jpg?raw=true)
+![Assets](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/SlimVML.jpg?raw=true)
 
 ## Extracting and Copying Mod Files
 - Open Explorer and go to Downloads.
