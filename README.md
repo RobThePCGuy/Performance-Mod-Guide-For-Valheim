@@ -1,6 +1,6 @@
 ### If you enjoyed this guide, consider buying me a $1 coffee!
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge&logo=appveyor)](https://www.paypal.com/donate?hosted_button_id=KCNTBC9GGPR2U)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge&logo=appveyor)](https://paypal.me/robthepcguy)
 
 # Performance Mod Guide For Valheim
 
