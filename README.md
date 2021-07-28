@@ -195,7 +195,7 @@ cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\
 
 *Here is my email if you wish to ask about something else.*
 
-[rob@zero-one-zero.com](mailto:rob@zero-one-zero.com)
+[crazypants010@gmail.com](mailto:crazypants010@gmail.com)
 
 | Mods I Use |
 | ---------- |
