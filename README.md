@@ -66,7 +66,7 @@ cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\
 
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-4.jpg?raw=true)
 
-> After launch you can verify that **valheim.exe** now has a **High** Base priority from the [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
+> After launch you can verify that **valheim.exe** now has a **High** Base priority from the [Windows Task Manager].(https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)
 
 ## Modify boot.config
 
@@ -108,43 +108,40 @@ scripting-runtime-version=latest
 [1]:  https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
 [2]:  https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/ "Redirect to homepage"
 
-### BuildShare
+### BuildShare & SlimVML
 
 > Allows for the saving and loading of constructions in the new **.vbuild** file format. 
-> SlimVML Mod Loader is required for it to function.
+> SlimVML Mod Loader lets BuildShare function within the BepInEx Mod Framework.
 
-- Register or login to [Link to Nexus](https://users.nexusmods.com/auth/sign_in)
-- Now go to the [Link to BuildShare](https://www.nexusmods.com/valheim/mods/5)
-- Select **Manual--->** *(Required Mod pop-up)* **--->Download--->Slow Download**
+- Go to [SlimVML Loader](https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/)
+- Click **Manual Download** to download SlimVML Loader which has BuildShare & SlimVML in one zip.
 
-![Required Mod pop-up](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/Buildshare-1.jpg?raw=true)
+[![alt text][1]][2]
 
-### BepInEx SlimVML Loader
-
-> This allows BuildShare to to function within the BepInEx Mod Framework.
-
-- Go to [Link to GitHub](https://github.com/BepInEx/BepInEx.SlimVML.Loader/releases/latest)
-- Under **Assets** click on **SlimVML.Loader.dll**
-
-![Assets](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/SlimVML.jpg?raw=true)
+[1]:  https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
+[2]:  https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/ "Redirect to homepage"
 
 ## Extracting and Copying Mod Files
 - Open Explorer and go to Downloads.
 ```sh
 %USERPROFILE%\Downloads\
 ```
-- Extract **denikson-BepInExPack** zip file.
-- Open the **BepInExPack_Valheim** folder.
+- Extract **denikson-BepInExPack_Valheim-x.x.xxxx.zip** file.
+- Open the **denikson-BepInExPack_Valheim-x.x.xxxx** folder.
 - Select All the files/folders.
 - **Copy--->Paste** them into the Valheim directory.
-- Find **SlimVML.Loader.dll** in Downloads and **Copy--->Paste** into:
 ```sh
-C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\patchers
+C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
-- Copy **CR-BuildShare_VML.dll** into the Mods directory. **Create the folders if needed.**
+- Extract **BepInEx-SlimVML_Loader-x.x.x.zip** file.
+- Open the **BepInEx-SlimVML_Loader-x.x.x** folder.
+- Select All the files/folders.
+- **Copy--->Paste** them into the Valheim directory.
+- Replace All Files when prompted.
 ```sh
-C:\Program Files (x86)\Steam\steamapps\common\Valheim\InSlimVML\Mods
+C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
+
 ## Using BuildShare
 ### Run Valheim & Load a World
 - Once loaded up, you’ll see a **BuildShare** button to the left. Click on it and the menu will appear.
@@ -165,7 +162,6 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\InSlimVML\Mods
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 ```
 ## Deploy the Construction Mod
-- In Valheim, select the **Builds** menu within **BuildShare**
 - Find the **Drop-Down** and select the mod you copied.
 - Select **Toggle** to see where the mod will go before you Build it.
 - Once you’ve found a spot, click on **Build**
