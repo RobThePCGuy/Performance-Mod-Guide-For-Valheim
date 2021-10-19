@@ -83,9 +83,8 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.1.jpg?raw=true)
 - Add the following three lines to the **top** of the file leaving the original text.
 ```sh
-gfx-enable-gfx-jobs=1
+gfx-enable-jobs=1
 gfx-enable-native-gfx-jobs=1
-scripting-runtime-version=latest
 ```
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.2.jpg?raw=true)
 - Save and close Notepad.
