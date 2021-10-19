@@ -56,11 +56,11 @@ cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\
 - Leave the pasted text alone and type the following after it. Ensuring to leave a space between the two.
 
 ```sh
- %command% -window-mode exclusive -screen-fullscreen
+ %command% -window-mode exclusive
 ```
 - Here is the full **Launch Options** for your reference.
 ```sh
-"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen
+"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive
 ```
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-3.jpg?raw=true)
 
@@ -179,7 +179,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 
 *Not using Steam Launch Options? Try this in the Target*
 ```sh
-cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive -screen-fullscreen
+cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive
 ```
 # Edits - Sources - Thanks
 *Thank [Reddit user RustyB3ans for the boot.config fixes](https://www.reddit.com/user/RustyB3ans/)*
