@@ -175,6 +175,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 | -window-mode (exclusive or borderless) | Overrides full-screen windowing mode | Yes |
 | -popupwindow | A window without a frame. | No |
 | -force-d3d9 | Run a game using DirectX 9 | Not sure. Need testers. |"
+
 *Not using Steam Launch Options? Try this in the Target*
 ```sh
 cmd.exe /c start Valheim /high "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive
