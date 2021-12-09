@@ -25,7 +25,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim
 - Right-Click on **valheim.exe**
 
 > *If you don't see **valheim.exe** but do see **valheim**, it means that **Hidden Items** aren't being displayed. 
-> Look for **Application** in the column next to it; this is where we'll find our **.exe**.*
+> Look for **Application** in the **Type** column two colums over; this is where you can verify if it's an **.exe**.*
 
 - Select **Create shortcut** and rename it to **valheim**
 
@@ -33,7 +33,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim
 
 ## Create a Command Shortcut
 - **Right-click** the valheim shortcut and choose **properties**
-- Click in the **Target** field. Use the arrow keys to move the cursor to the start.
+- Click in the **Target** field and arrow over to the beginning.
 - Leave the original text alone, but type the following before it.
 
 ```sh
@@ -44,8 +44,7 @@ cmd.exe /c start "Valheim" /high
 cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe"
 ```
 
-> The “/c” instructs the command prompt to execute whatever we type after it and then close. 
-> Unlike a "/k", which would leave the window open.
+> The **/c** instructs the command prompt to close after executing our command.
 
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-2.jpg?raw=true)
 
@@ -53,7 +52,7 @@ cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\
 - **SHIFT+Right-Click** on the valheim shortcut
 - Select **Copy as path**
 - In Steam, paste the clipboard contents into the **Valheim Launch Options**.
-- Leave the pasted text alone and type the following after it. Ensuring to leave a space between the two.
+- After our path enter in a space followed by the following.
 
 ```sh
  %command% -window-mode exclusive
@@ -62,11 +61,11 @@ cmd.exe /c start "Valheim" /high "C:\Program Files (x86)\Steam\steamapps\common\
 ```sh
 "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive
 ```
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-3.jpg?raw=true)
+![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-3.jpg?raw=true)
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-4.jpg?raw=true)
+![Task Manager](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-4.jpg?raw=true)
 
-> After launch you can verify that **valheim.exe** now has a **High** Base priority from the [Windows Task Manager].(https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)
+> After launch you can verify that **valheim.exe** now has a **High** Base priority from [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
 
 ## Modify boot.config
 
@@ -81,7 +80,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 - Find and edit the **boot.config** file using [Notepad](https://www.howtogeek.com/672710/why-notepad-is-still-awesome-for-taking-notes/) or [Notepad++](https://notepad-plus-plus.org/).
 
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.1.jpg?raw=true)
-- Add the following three lines to the **top** of the file leaving the original text.
+- Add the following two lines to the **top** of the file leaving the original text.
 ```sh
 gfx-enable-jobs=1
 gfx-enable-native-gfx-jobs=1
