@@ -13,61 +13,80 @@
 ![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/image2.jpg?raw=true)
 
 # Increase Performance
+
 ## High Priority Mode
+
 **In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.**
 
 > **What is High Priority?** 
+
 > *In Windows, the operating system distributes the computer’s resources based on the priority of the application.* 
+
 > **Higher priority means more resources will go to Valheim.**
 
 ### Navigate to the Valheim Directory.
 
 - In your Steam Library Right-Click on Valheim & go to **Manage--->Browse local files**.
+
 - The **Windows Explorer** window should open to the Valheim directory.
+
 - Locate the file **valheim.exe**
 
-> *If you don't see **valheim.exe** but do see **valheim**, it means that **Hidden Items** aren't being displayed.
-> Look for **Application** in the **Type** column. **(Circled in red in the image below)** That is where you can verify if it's an **.exe**.*
+> *Don’t see **valheim.exe** but see **valheim**? **Hidden Items** aren’t being displayed.
+
+> Look for **Application** in the **Type** column. **(Circled in red in the image below)** That is where you can verify if it’s an **.exe**.*
 
 - Right-Click on **valheim.exe**
+
 - Select **Create shortcut** and rename it to **valheim**
 
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-1.jpg?raw=true)
 
 ## Create a Command Shortcut
+
 - **Right-click** the valheim shortcut and choose **properties**
+
 - In the **Target** field, leave the original text but type the following before it.
 
 ```sh
 cmd.exe /c start Valheim /high 
 ```
+
 - Here is the full **Target** for your reference.
+
 ```sh
-cmd.exe /c start Valheim /high "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe"
+cmd.exe /c start Valheim /high “C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe”
 ```
 
 > The **/c** instructs the command prompt to close after executing our command.
 
+
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-2.jpg?raw=true)
 
 - Click **OK** when finished.
-- Back at the Valheim directory hold down the **SHIFT** key and **Right-Click** on the valheim shortcut
+
+- Back at the Valheim directory, hold down the **SHIFT** key and **Right-Click** on the valheim shortcut
+
 - Select **Copy as path**
+
 - Bring Steam back up and paste the clipboard contents into **Valheim Launch Options**.
-- After the pasted contects, which is the path to our shortcut, type a space followed by the following.
+
+- After the **pasted contents**, (**which is the path to our shortcut**) type the following, making sure that there is a space between the two.
 
 ```sh
  %command% -window-mode exclusive
 ```
+
 - Here is the full **Launch Options** for your reference.
 ```sh
+
 "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive
 ```
 ![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-3.jpg?raw=true)
 
 ![Task Manager](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-4.jpg?raw=true)
 
-> Now after you run Valheim you can verify that **valheim.exe** now has a **High** Base priority from the [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
+> Now after you run Valheim, you can verify that **valheim.exe** now has a **High** Base priority from the [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
 
 ## Modify boot.config
 
