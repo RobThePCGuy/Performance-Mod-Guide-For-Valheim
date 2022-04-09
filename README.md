@@ -36,8 +36,7 @@
 
 ## Create a Command Shortcut
 - **Right-click** the valheim shortcut and choose **properties**
-- Click in the **Target** field and arrow over to the beginning.
-- Leave the original text alone, but type the following before it.
+- In the **Target** field, leave the original text but type the following before it.
 
 ```sh
 cmd.exe /c start Valheim /high 
