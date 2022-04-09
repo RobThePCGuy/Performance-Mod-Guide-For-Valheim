@@ -51,10 +51,10 @@ cmd.exe /c start Valheim /high "C:\Program Files (x86)\Steam\steamapps\common\Va
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-2.jpg?raw=true)
 
 - Click **OK** when finished.
-- **SHIFT+Right-Click** on the valheim shortcut
+- Back at the Valheim directory hold down the **SHIFT** key and **Right-Click** on the valheim shortcut
 - Select **Copy as path**
-- In Steam, paste the clipboard contents into the **Valheim Launch Options**.
-- After our path enter in a space followed by the following.
+- Bring Steam back up and paste the clipboard contents into **Valheim Launch Options**.
+- After the pasted contects, which is the path to our shortcut, type a space followed by the following.
 
 ```sh
  %command% -window-mode exclusive
