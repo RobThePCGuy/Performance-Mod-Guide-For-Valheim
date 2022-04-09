@@ -4,11 +4,13 @@
 
 # Performance Mod Guide For Valheim
 
-**You have stumbled onto my How-to-Guide for editing Valheim and Windows files.**
+**You are about to embark on the modding journey of a lifetime. Surely recommending you to read through the guide first before attempting it is going to fall on deaf ears. Nonetheless, I recommended it.**
 
-**If this induces apprehension, then I recommend going back to watching Puppy Dog Pals**
+**I hope this guide finds all well. It isn’t the fix all, end all problems guide, but it’s a start. Please, if you have any suggestions, hit me up at crazypants010@gmail.com.**
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/image2.jpg?raw=true)
+**If you are the type looking for meaning, I recommend visiting [Rob’s Bible](https://github.com/ZeroOneZero/robs-bible).**
+
+![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/image2.jpg?raw=true)
 
 # Increase Performance
 ## High Priority Mode
@@ -193,7 +195,6 @@ cmd.exe /c start Valheim /high "C:\Program Files (x86)\Steam\steamapps\common\Va
 
 | Mods I Use |
 | ---------- |
-| RememberIPDamnit |
 | Custom Graphics Settings |
 | BetterUI |
 | SkToolbox |
@@ -210,7 +211,3 @@ cmd.exe /c start Valheim /high "C:\Program Files (x86)\Steam\steamapps\common\Va
 | More Slots |
 | Improved Build HUD |
 | Faster Teleportation |
-
-| Texture Pack |
-| ------------ |
-| Badgers 2k Re-Texture |
