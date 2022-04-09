@@ -24,11 +24,12 @@
 
 - In your Steam Library Right-Click on Valheim & go to **Manage--->Browse local files**.
 - The **Windows Explorer** window should open to the Valheim directory.
+- Locate the file **valheim.exe**
+
+> *If you don't see **valheim.exe** but do see **valheim**, it means that **Hidden Items** aren't being displayed.
+> Look for **Application** in the **Type** column. **(Circled in red in the image below)** That is where you can verify if it's an **.exe**.*
+
 - Right-Click on **valheim.exe**
-
-> *If you don't see **valheim.exe** but do see **valheim**, it means that **Hidden Items** aren't being displayed. 
-> Look for **Application** in the **Type** column two colums over; this is where you can verify if it's an **.exe**.*
-
 - Select **Create shortcut** and rename it to **valheim**
 
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-1.jpg?raw=true)
