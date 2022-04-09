@@ -21,9 +21,9 @@
 > **Higher priority means more resources will go to Valheim.**
 
 ### Navigate to the Valheim Directory.
-```sh
-C:\Program Files (x86)\Steam\steamapps\common\Valheim
-```
+
+- In your Steam Library Right-Click on Valheim & go to **Manage--->Browse local files**.
+- The **Windows Explorer** window should open to the Valheim directory.
 - Right-Click on **valheim.exe**
 
 > *If you don't see **valheim.exe** but do see **valheim**, it means that **Hidden Items** aren't being displayed. 
