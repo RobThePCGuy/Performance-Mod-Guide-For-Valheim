@@ -74,13 +74,13 @@ cmd.exe /c start Valheim /high “C:\Program Files (x86)\Steam\steamapps\common\
 - After the **pasted contents**, (**which is the path to our shortcut**) type the following, making sure that there is a space between the two.
 
 ```sh
- %command% -window-mode exclusive
+ %command% -window-mode exclusive -screen-fullscreen
 ```
 
 - Here is the full **Launch Options** for your reference.
 ```sh
 
-"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive
+"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen
 ```
 ![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-3.jpg?raw=true)
 
