@@ -32,9 +32,9 @@
 
 - Locate the file **valheim.exe**
 
-> *Don’t see **valheim.exe** but see **valheim**? **Hidden Items** aren’t being displayed.
+> Don’t see **valheim.exe** but see **valheim**? **Hidden Items** aren’t being displayed.
 
-> Look for **Application** in the **Type** column. **(Circled in red in the image below)** That is where you can verify if it’s an **.exe**.*
+> Look for **Application** in the **Type** column. **(Circled in red in the image below)** That is where you can verify if it’s an **.exe**.
 
 - Right-Click on **valheim.exe**
 
