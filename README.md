@@ -49,13 +49,13 @@
 - In the **Target** field, leave the original text but type the following before it.
 
 ```sh
-cmd.exe /c start Valheim /high 
+cmd /c start /high Valheim 
 ```
 
 - Here is the full **Target** for your reference.
 
 ```sh
-cmd.exe /c start Valheim /high “C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe”
+cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe"
 ```
 
 > The **/c** instructs the command prompt to close after executing our command.
