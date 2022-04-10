@@ -128,12 +128,17 @@ gfx-enable-native-gfx-jobs=1
 [2]:  https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/ "Redirect to homepage"
 
 ### BuildShare & SlimVML
+> BuildShare allows for the importing and exporting of constructions in the **.vbuild** file format. 
+> SlimVML Mod Loader is required for it to function.
 
-> Allows for the saving and loading of constructions in the new **.vbuild** file format. 
-> SlimVML Mod Loader lets BuildShare function within the BepInEx Mod Framework.
+- Create an account to download mods from Nexus. [Link to Nexus](https://www.nexusmods.com/)
+- After **creating/logging** into your account click on this link to go to BuildShare. [Link to BuildShare](https://www.nexusmods.com/valheim/mods/5)
+- To download find **Manual--->** (Required Mod pop-up) **--->Download--->Slow Download**
+
+![Required Mod pop-up](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/Buildshare-1.jpg?raw=true)
 
 - Go to [SlimVML Loader](https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/)
-- Click **Manual Download** to download SlimVML Loader which has BuildShare & SlimVML in one zip.
+- Click **Manual Download** to download SlimVML Loader which BuildShare depends on.
 
 [![alt text][1]][2]
 
@@ -154,11 +159,16 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
 - Extract **BepInEx-SlimVML_Loader-x.x.x.zip** file.
 - Open the **BepInEx-SlimVML_Loader-x.x.x** folder.
-- Select All the files/folders.
-- **Copy--->Paste** them into the Valheim directory.
-- Replace All Files when prompted.
+- Copy the **BepInEx** folder into the Valheim directory.
+- Replace All Files if prompted.
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim
+```
+- Extract **BuildShare No Herobrine-x-x-x-xxxxxxxxxx.zip**
+- Copy the CR-BuildShare_VML.dll into the following directory.
+
+```sh
+C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\SlimVML
 ```
 
 ## Using BuildShare
