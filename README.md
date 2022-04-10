@@ -133,7 +133,7 @@ gfx-enable-native-gfx-jobs=1
 
 - Create an account to download mods from Nexus. [Link to Nexus](https://www.nexusmods.com/)
 - After **creating/logging** into your account click on this link to go to BuildShare. [Link to BuildShare](https://www.nexusmods.com/valheim/mods/5)
-- To download find **Manual--->** (Required Mod pop-up) **--->Download--->Slow Download**
+- To download click on **Manual--->** At the required Mod pop-up select **Download** **--->Slow Download**
 
 ![Required Mod pop-up](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/Buildshare-1.jpg?raw=true)
 
