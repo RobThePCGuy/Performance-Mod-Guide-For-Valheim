@@ -22,11 +22,11 @@
 
 **In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.**
 
-> **What is High Priority?** 
+### What is High Priority? 
 
 > *In Windows, the operating system distributes the computer’s resources based on the priority of the application.* 
 
-> **Higher priority means more resources will go to Valheim.**
+> *Higher priority means more resources will go to Valheim.*
 
 ### Navigate to the Valheim Directory.
 
@@ -36,9 +36,9 @@
 
 - Locate the file **valheim.exe**
 
-> Don’t see **valheim.exe** but see **valheim**? **Hidden Items** aren’t being displayed.
+> *Don’t see **valheim.exe** but see **valheim**? **Hidden Items** aren’t being displayed.*
 
-> Look for **Application** in the **Type** column. **(Circled in red in the image below)** That is where you can verify if it’s an **.exe**.
+> *Look for **Application** in the **Type** column. **(Circled in red in the image below)** That is where you can verify if it’s an **.exe**.*
 
 - Right-Click on **valheim.exe**
 
@@ -62,7 +62,7 @@ cmd /c start /high Valheim
 cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe"
 ```
 
-> The **/c** instructs the command prompt to close after executing our command.
+> *The **/c** instructs the command prompt to close after executing our command.*
 
 
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-2.jpg?raw=true)
@@ -73,9 +73,9 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 
 - Select **Copy as path**
 
-- Bring Steam back up and paste the clipboard contents into **Valheim Launch Options**.
+- Open back up **Steam** and paste the clipboard contents into the **Valheim Launch Options**.
 
-- After the **pasted contents**, (**which is the path to our shortcut**) type the following, making sure that there is a space between the two.
+- After the **pasted contents**, (*which is the path to our shortcut*), type the following, making sure that there is a space between the two.
 
 ```sh
  %command% -window-mode exclusive -screen-fullscreen
@@ -86,90 +86,96 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 
 "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen
 ```
+
 ![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-3.jpg?raw=true)
+
+> *Now after you run **Valheim**, you can verify that **valheim.exe** now has a **High** Base priority from the [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).*
 
 ![Task Manager](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-4.jpg?raw=true)
 
-> Now after you run Valheim, you can verify that **valheim.exe** now has a **High** Base priority from the [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
-
 ## Modify boot.config
 
-> The file we will edit in this section enables the **GPU [Graphics Processing Unit]** to handle more tasks, reducing the load on the **CPU [Central Processing Unit]**.
+> *The file we will edit in this section enables the **GPU [Graphics Processing Unit]** to handle more tasks, reducing the load on the **CPU [Central Processing Unit]**.*
 
-- In your Steam Library **Right-Click** on Valheim & go to **Manage--->Browse local files**
-- A Explorer window should open. 
+- In your Steam Library **Right-Click** on **Valheim** & go to **Manage--->Browse local files**
+- A **Windows Explorer** window should open. 
 - Go into the **valheim_Data** directory.
+
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 ```
+
 - Find and edit the **boot.config** file using [Notepad](https://www.howtogeek.com/672710/why-notepad-is-still-awesome-for-taking-notes/) or [Notepad++](https://notepad-plus-plus.org/).
 
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.1.jpg?raw=true)
-- Add the following two lines to the **top** of the file leaving the original text.
+- Add the following two lines to the **top** of the file **leaving** the original text.
+
 ```sh
 gfx-enable-jobs=1
 gfx-enable-native-gfx-jobs=1
 ```
+
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.2.jpg?raw=true)
-- Save and close Notepad.
+- **Save and close** Notepad.
 
 # Modding Valheim
 
-> Modding Valheim is fraught with danger! Be aware that updates may cause mods to load incorrectly and Valheim to crash.
-> If your game isn't loading. [Verify Files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) through Steam.
+> *Modding Valheim is fraught with danger! Be aware that updates may cause mods to load incorrectly and Valheim to crash.*
+> *If your game isn't loading. **[Verify Files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335)** through Steam.*
 
 ## Preparing Files for Install
 ### BepInExPack Valheim
 
-> BepInExPack is a general-purpose framework for Unity modding. Enabling plugins that use **.dll** files.
+> *What is **BepInEx**? It is a general-purpose framework for Unity modding. Enabling plugins that use **.dll** files.*
 
 - Go to [Link to BepInExPack Valheim](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
-- Click **Manual Download** to download BepInExPack Valheim.
+- Click **Manual Download** to download **BepInExPack Valheim**.
 
 [![alt text][1]][2]
-
 [1]:  https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
 [2]:  https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/ "Redirect to homepage"
 
 ### BuildShare & SlimVML
-> BuildShare allows for the importing and exporting of constructions in the **.vbuild** file format. 
-> SlimVML Mod Loader is required for it to function.
+> *The plugin **BuildShare** allows for the importing and exporting of constructions in the **.vbuild** file format. *
+> *However, **SlimVML Mod Loader** is required for it to function.*
 
-- Create an account to download mods from Nexus. [Link to Nexus](https://www.nexusmods.com/)
-- After **creating/logging** into your account click on this link to go to BuildShare. [Link to BuildShare](https://www.nexusmods.com/valheim/mods/5)
-- To download click on **Manual--->** At the required Mod pop-up select **Download** **--->Slow Download**
+- Create an account to download mods from **Nexus**. [Link to Nexus](https://www.nexusmods.com/)
+- After **creating/logging** into your account click on this link to go to **BuildShare**. [Link to BuildShare](https://www.nexusmods.com/valheim/mods/5)
+- To download click on **Manual--->** then at the **required mod pop-up** select **Download** lastly **--->Slow Download**
 
 ![Required Mod pop-up](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/Buildshare-1.jpg?raw=true)
 
 - Go to [SlimVML Loader](https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/)
-- Click **Manual Download** to download SlimVML Loader which BuildShare depends on.
+- Click **Manual Download** to download BuildShares dependency **SlimVML Loader**.
 
 [![alt text][1]][3]
-
 [1]:  https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
 [3]:  https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/ "Redirect to homepage"
 
 ## Extracting and Copying Mod Files
-- Open Explorer and go to Downloads.
+- Open **Windows Explorer** and go to **Downloads**.
+- 
 ```sh
 %USERPROFILE%\Downloads\
 ```
+
 - Extract **denikson-BepInExPack_Valheim-x.x.xxxx.zip** file.
-- Open the **denikson-BepInExPack_Valheim-x.x.xxxx** folder.
-- Select All the files/folders.
-- **Copy--->Paste** them into the Valheim directory.
+- Open **denikson-BepInExPack_Valheim-x.x.xxxx** folder and then **BepInExPack_Valheim**.
+- Inside of **BepInExPack_Valheim**, **Copy--->** all the files and folders and **Paste--->** into the **Valheim** directory.
+
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
+
 - Extract **BepInEx-SlimVML_Loader-x.x.x.zip** file.
 - Open the **BepInEx-SlimVML_Loader-x.x.x** folder.
 - Copy the **BepInEx** folder into the Valheim directory.
-- Replace All Files if prompted.
+
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
 - Extract **BuildShare No Herobrine-x-x-x-xxxxxxxxxx.zip**
-- Copy the CR-BuildShare_VML.dll into the following directory.
+- Copy the **CR-BuildShare_VML.dll** into the **SlimVML** folder located at:
 
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\SlimVML
@@ -180,26 +186,32 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\SlimVML
 - Once loaded up, you’ll see a **BuildShare** button to the left. Click on it and the menu will appear.
 - Select **Build--->Get Builds**
 - An Explorer window and Web Page should appear. If not, minimize or close Valhiem, then you should see them.
+
 ### Download Mods from Nexus
 - The [webpage](https://www.nexusmods.com/valheim/mods/categories/10/) that opened will have a search bar at the top.
 - Enter my username [RobsDAPCGuy](https://www.nexusmods.com/valheim/users/70149208?tab%3Duser%2Bfiles=&tab=user+files)
 - Then change the category from **Mods to Users** and click **Search**
 
-*Choose my mods or search for other construction mods within Nexus.*
+> *Choose one of my mods or search for other construction mods within Nexus.*
+
 - Select a mod from the list.
-- Click on **Manual to the right**
-*Sometimes a* **Mod Requires** *window will appear.*
+- Click on **Manual**, to the right**
+> *Sometimes a **Mod Required** *window will appear.*
 - Click **Download--->Slow Download**
-- Extract it and **Copy-->Paste** the .vbuild file to the Explorer window. Or to:
+- Extract it and **Copy-->Paste** the **.vbuild** file to the Explorer window. Or to:
+
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 ```
+
 ## Deploy the Construction Mod
 - Find the **Drop-Down** and select the mod you copied.
 - Select **Toggle** to see where the mod will go before you Build it.
 - Once you’ve found a spot, click on **Build**
+
 # Additional Launch Options
-*I run a Shadow PC, for me -force-vulcan makes it run worse. I run at 4k maxed following the steps in this guide. Experiment and figure out which one works best for your setup.*
+> *On my PC **-force-vulcan** makes it run worse. I run at 4k maxed following the steps in this guide. Experiment and figure out which one works best for your setup.*
+
 | Launch Options | Description | Usefulness |
 | -------------- | ----------- | ---------- |
 | -malloc=system | Allows the OS to decide the amount of RAM to use. | Not sure. Need testers. |
@@ -211,10 +223,11 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 | -popupwindow | A window without a frame. | No |
 | -force-d3d9 | Run a game using DirectX 9 | Not sure. Need testers. |"
 
-*Not using Steam Launch Options? Try this in the Target*
+> *Not using Steam Launch Options? Try this in the shortcuts **Target** field*
 ```sh
-cmd.exe /c start Valheim /high "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive
+cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive -screen-fullscreen
 ```
+
 # Edits - Sources - Thanks
 *Thank [Reddit user RustyB3ans for the boot.config fixes](https://www.reddit.com/user/RustyB3ans/)*
 
@@ -228,22 +241,22 @@ cmd.exe /c start Valheim /high "C:\Program Files (x86)\Steam\steamapps\common\Va
 
 | Mods I Use |
 | ---------- |
-| Custom Graphics Settings |
 | BetterUI |
-| SkToolbox |
 | Build Camera |
+| BuildShare (AdvancedBuilding) |
+| Craft Build Smelt Cook Fuel Pull From Containers |
 | First person view |
-| No lens dirt |
-| Unrestricted Portals |
-| Nexus Update Check |
-| BuildShare (AdvancedBuilding)|
-| InSlimVML - Valheim Mod Loader |
-| Item Stacks |
-| Map Teleport |
-| Valheim - Interact While Building |
-| More Slots |
+| HD Valheim |
 | Improved Build HUD |
-| Faster Teleportation |
+| Item Stacks - Valheim BepInEx Plugin |
+| Map Teleport |
+| Nexus Update Check |
+| Plant Everything |
+| SkToolbox - Console Admin and Chat Functionality Extender |
+| Smarter containers |
+| Unrestricted Portals |
+| Valheim - Interact While Building |
+| Valheim Performance Optimizations |
 
 
 Copyright [2022] [Robert Adams]
