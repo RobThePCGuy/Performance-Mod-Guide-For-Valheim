@@ -116,7 +116,7 @@ gfx-enable-native-gfx-jobs=1
 # Modding Valheim
 
 > Modding Valheim is fraught with danger! Be aware that updates may cause mods to load incorrectly and Valheim to crash.
-> If your game isn't loading. Rename the Valheim directory to **Valheim.bak** and [Verify Files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) through Steam.
+> If your game isn't loading. [Verify Files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) through Steam.
 
 ## Preparing Files for Install
 ### BepInExPack Valheim
@@ -144,10 +144,10 @@ gfx-enable-native-gfx-jobs=1
 - Go to [SlimVML Loader](https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/)
 - Click **Manual Download** to download SlimVML Loader which BuildShare depends on.
 
-[![alt text][1]][2]
+[![alt text][1]][3]
 
 [1]:  https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
-[2]:  https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/ "Redirect to homepage"
+[3]:  https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/ "Redirect to homepage"
 
 ## Extracting and Copying Mod Files
 - Open Explorer and go to Downloads.
