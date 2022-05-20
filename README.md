@@ -260,3 +260,4 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 
 
 Copyright [2022] [Robert Adams]
+![](https://hit.yhype.me/github/profile?user_id=10876982)
