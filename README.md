@@ -236,7 +236,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 
 > *Cannot use group policy on Windows 10 Home*
 
-- **Windows Key + R** and type in ```sh gpedit.msc ```.
+- **Windows Key + R** and type in ``` gpedit.msc ```.
 
 ![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/k7aaffa9lmd61.webp?raw=true)
 
