@@ -151,8 +151,9 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 - Click **Manual Download** to download **BepInExPack Valheim**.
 
 [![alt text][1]][2]
-[1]:  https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
-[2]:  https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/ "Redirect to homepage"
+
+[1]:https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
+[2]:https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/
 
 ### BuildShare & SlimVML
 > *The plugin **BuildShare** allows for the importing and exporting of constructions in the **.vbuild** file format. *
@@ -167,13 +168,14 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 - Go to [SlimVML Loader](https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/)
 - Click **Manual Download** to download BuildShares dependency **SlimVML Loader**.
 
-[![alt text][1]][3]
-[1]:  https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
-[3]:  https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/ "Redirect to homepage"
+[![alt text][1]][2]
+
+[1]:https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
+[2]:https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/
 
 ## Extracting and Copying Mod Files
 - Open **Windows Explorer** and go to **Downloads**.
-- 
+
 ```sh
 %USERPROFILE%\Downloads\
 ```
