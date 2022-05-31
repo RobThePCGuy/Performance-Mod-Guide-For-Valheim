@@ -62,7 +62,7 @@ gfx-enable-native-gfx-jobs=1
 
 > This tells Steam the **Windowed Mode** will allow the application to use **Fullscreen** exclusivly.
 
-## High Priority Mode (Optional)
+## High Priority Mode
 
 **In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.**
 
