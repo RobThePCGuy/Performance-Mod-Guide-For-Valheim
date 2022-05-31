@@ -1,24 +1,68 @@
-[![GitHub license](https://img.shields.io/github/license/ZeroOneZero/Performance-Mod-Guide-For-Valheim?style=for-the-badge)](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/ZeroOneZero/Performance-Mod-Guide-For-Valheim?style=for-the-badge)](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/issues)
+**Consider donating a $1 if my guide helped. I’ll use it to buy more coffee!**
 [![GitHub stars](https://img.shields.io/github/stars/ZeroOneZero/Performance-Mod-Guide-For-Valheim?style=for-the-badge)](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/stargazers)
-
-### If you enjoyed this guide, consider buying me a $1 coffee!
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge&logo=appveyor)](https://paypal.me/robthepcguy)
+[![Donate with PayPal](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N86JXA77CARWE)
 
 # Performance Mod Guide For Valheim
 
-**You are about to embark on the modding journey of a lifetime. Surely recommending you to read through the guide first before attempting it is going to fall on deaf ears. Nonetheless, I recommended it.**
+**I hope this guide finds all well! It’s not the fix all, end all problems guide, but it’s a start. I aim to preserve the veraciousness of this guide so if you notice any inconsistencies, open an issue through GitHub or [Contact Me](mailto:crazypants010@gmail.com). I welcome any aid.**
 
-**I hope this guide finds all well. It isn’t the fix all, end all problems guide, but it’s a start. Please, if you have any suggestions, hit me up at crazypants010@gmail.com.**
+**I have outlined some simple and not so simple steps. I would suggest you read through this first so you know what you’re getting yourself into.**
 
 **If you are the type looking for meaning, I recommend visiting [Rob’s Bible](https://github.com/ZeroOneZero/robs-bible).**
 
 ![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/image2.jpg?raw=true)
 
-# Increase Performance
+# Some Overlooked Things
 
-## High Priority Mode
+- To see your in-game FPS [Frames per Second] press **F2**.
+- Updates to the game will remove the changes to the boot.config below.
+
+# Increase Performance
+## Modify boot.config
+
+> *The file we will edit in this section enables the **GPU [Graphics Processing Unit]** to handle more tasks, reducing the load on the **CPU [Central Processing Unit]**.*
+
+- In your Steam Library **Right-Click** on **Valheim** & go to **Manage--->Browse local files**
+- A **Windows Explorer** window should open. 
+- Go into the **valheim_Data** directory.
+
+```sh
+C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
+```
+
+- Find and edit the **boot.config** file using [Notepad](https://www.howtogeek.com/672710/why-notepad-is-still-awesome-for-taking-notes/) or [Notepad++](https://notepad-plus-plus.org/).
+
+![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.1.jpg?raw=true)
+- Add the following two lines to the **top** of the file **leaving** the original text.
+
+```sh
+gfx-enable-jobs=1
+gfx-enable-native-gfx-jobs=1
+```
+
+![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.2.jpg?raw=true)
+- **Save and close** Notepad.
+
+## Force Display Paramaters Via Steam
+
+- **A setting that can cause mixed performance is the fullscreen or borderless window mode.**
+
+> Borderless is a maximized window without borders. Allowing you to move the focus in and out of an application. It reflects the current desktop resolution. If you are running 4K on your desktop, having borderless set for a program will continue with that resolution. 
+
+> Choosing Fullscreen over Borderless has the potential to boost performance. It allows the application to take control of the display and set a separate resolution. However, it's difficult to shift your focus in and out.
+
+- Find Valhiem in your Steam Libary, then **Right Click** -> **Properties...**.
+
+- **Copy/Paste** this into the **Launch Options** field.
+
+```sh
+-window-mode exclusive -screen-fullscreen
+```
+
+> This tells Steam the **Windowed Mode** will allow the application to use **Fullscreen** exclusivly.
+
+## High Priority Mode (Optional)
 
 **In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.**
 
@@ -92,31 +136,6 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 > *Now after you run **Valheim**, you can verify that **valheim.exe** now has a **High** Base priority from the [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).*
 
 ![Task Manager](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-4.jpg?raw=true)
-
-## Modify boot.config
-
-> *The file we will edit in this section enables the **GPU [Graphics Processing Unit]** to handle more tasks, reducing the load on the **CPU [Central Processing Unit]**.*
-
-- In your Steam Library **Right-Click** on **Valheim** & go to **Manage--->Browse local files**
-- A **Windows Explorer** window should open. 
-- Go into the **valheim_Data** directory.
-
-```sh
-C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
-```
-
-- Find and edit the **boot.config** file using [Notepad](https://www.howtogeek.com/672710/why-notepad-is-still-awesome-for-taking-notes/) or [Notepad++](https://notepad-plus-plus.org/).
-
-![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.1.jpg?raw=true)
-- Add the following two lines to the **top** of the file **leaving** the original text.
-
-```sh
-gfx-enable-jobs=1
-gfx-enable-native-gfx-jobs=1
-```
-
-![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.2.jpg?raw=true)
-- **Save and close** Notepad.
 
 # Modding Valheim
 
@@ -237,7 +256,7 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 
 *Here is my email if you wish to ask about something else.*
 
-[crazypants010@gmail.com](mailto:crazypants010@gmail.com)
+
 
 | Mods I Use |
 | ---------- |
