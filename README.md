@@ -305,37 +305,3 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 
 
 Copyright [2022] [Robert Adams]
-I've read on Reddit people stating 'changing the Windows 10 Power Options from Balanced to High Performance has no effect on the actual performance due to Datacenter Managing it' ... blah blah blah.
-However, if you are like me and just feel some sort of way about not being able to keep the Power Option Setting on High Performance then this guide is for you. Call it a "Pet Peeve" if you will. I have a semi-simple option that probably won't work for everyone but it has been successful for me.
-I became a part of the Shadow family starting with Boost on 2020-02-28. Now I'm living life Infinitely better.
-Shadow Website Subscriptions Page
-Now the family can sit down and get to work. My procedure to get the High Performance Setting to stick even through reboots and shutdowns.
-Prerequisites:
-So, if you are reading this then I will assume that you or someone you know is having the same issue I ran into many months ago. That is no matter what I couldn't stop Windows 10 from reverting to the Balanced Power Setting. I tried custom plans, fake programs you name it.
-My hypothesis was if I only had the group policy editor then I could lock the Power Setting. I'm sure you realize by now that no matter if you are Boost, Ultra or Infinite the Windows OS Edition is the same. Basically Windows 10 Home. No matter what you read online you won't find a way to add a functional group policy to a Home version of Windows 10.
-First Option:
-- If you have a PC that has a legit version of Windows 7, 8 or 10 then all you have to do is set up your Microsoft Account on that PC. Windows will sync the digital licence for Windows 10 Pro... providing you have the Pro version of 7, 8 or 10.
-- After you completed the aforementioned step. Log on to your Shadow PC using the same Microsoft Account.
-- Then go to 'Settings --> Update & Security --> Activation --> Go to Store'
-Windows 10 Settings Activation GUI
-- That link will open the Windows Store. Where provided you logged in with the right Windows Account and everything synced hunky dory you'll see the 'Install' box.
-Second Option:
-- If you have the original 7, 8 or 10 Pro product key you could simply enter it in the Activation window. Instead of selecting 'Go to Store' select 'Change product key.'.
-Continuing Steps No Matter Option:
-- For me, it started to install then stated it failed. Well, after you reboot check your Activation page and you should see Windows 10 Pro.
-Windows 10 Settings Activation GUI
-- Let's Test it by opening Group Policy. 'Windows Key + R' and type in 'gpedit.msc'.
-Windows 10 Run GUI
-- Select 'Local Computer Policy --> Computer Configuration --> Administrative Templates --> System --> Power Management'
-Windows 10 Group Policy GUI
-- Double click on 'Select an active power plan' setting and change it to match the picture below. (Enabled and High Performance)
-Windows 10 Group Policy Power Management GUI
-- You should reboot your Shadow PC now. When it has come back log in then go to 'Settings --> System --> Power & sleep --> Additional power settings'
-Windows 10 Power & Sleep Settings
-- If everything worked as I know it should you will no longer be able to change the Preferred Plans in this window and thus thwarting Shadow PC being able to reset the setting.
-Windows 10 Control Panel Power Options
-Like I stated in the beginning of this post I did this not because I know it will make the Shadow PC faster just for my own personal vindication. The placebo has its effect.
-Comment below if this helped you. Or if you want to hate feel free there is all the room on the internet.
-Not a member of the Shadow PC family? You can feel free to use my Referral Code ROBMVGHE last I had heard you get $10 off and so will I.
-
-I like pictures, I hope you do too!
