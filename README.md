@@ -82,7 +82,7 @@ gfx-enable-native-gfx-jobs=1
 
 - Locate the file **valheim.exe**
 
-> *If you only see **valheim** and don’t see **valheim.exe**. Don't panic you just need to enable showing **[Hidden Items](https://support.microsoft.com/en-us/search?query=how%20to%20view%20hidden%20files%20in%20windows%2010#:~:text=Open%20File%20Explorer%20from%20the,folders%2C%20and%20drives%20and%20OK)**.
+> *If you only see **valheim** and don’t see **valheim.exe**. Don't panic you just need to enable showing **[Hidden Items](https://support.microsoft.com/en-us/search?query=how%20to%20view%20hidden%20files%20in%20windows%2010#:~:text=Open%20File%20Explorer%20from%20the,folders%2C%20and%20drives%20and%20OK)**.*
 
 > *Look for **Application** in the **Type** column. **(Circled in red in the image below)**. It is a way to verify if it’s an **.exe**.*
 
