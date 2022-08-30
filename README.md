@@ -15,23 +15,25 @@
 
 # Some Overlooked Things
 
-- To see your in-game FPS [Frames per Second] press **F2**.
-- Updates to the game will remove the changes to the boot.config below.
+- While in-game, pressing **F2** will display the FPS [Frames per Second].
+- Updating Valheim will remove any changes to your **boot.config**, shown below.
 
 # Increase Performance
 ## Modify boot.config
 
 > *The file we will edit in this section enables the **GPU [Graphics Processing Unit]** to handle more tasks, reducing the load on the **CPU [Central Processing Unit]**.*
 
-- In your Steam Library **Right-Click** on **Valheim** & go to **Manage--->Browse local files**
-- A **Windows Explorer** window should open. 
-- Go into the **valheim_Data** directory.
+- In your Steam Library **Right-Click** on **Valheim** & go to **Manage--->Browse local files**.
+- **Windows Explorer** should've opened to the games location. 
+- Inside the **valheim_Data** directory is where we'll find our **boot.config**.
 
 ```sh
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 ```
 
-- Find and edit the **boot.config** file using [Notepad](https://www.howtogeek.com/672710/why-notepad-is-still-awesome-for-taking-notes/) or [Notepad++](https://notepad-plus-plus.org/).
+- Locate and edit the **boot.config** file using either [Notepad](https://www.howtogeek.com/672710/why-notepad-is-still-awesome-for-taking-notes/) or [Notepad++](https://notepad-plus-plus.org/).
+
+> *Personally I use [Notepad++](https://notepad-plus-plus.org/).*
 
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.1.jpg?raw=true)
 - Add the following two lines to the **top** of the file **leaving** the original text.
@@ -46,13 +48,13 @@ gfx-enable-native-gfx-jobs=1
 
 ## Force Display Paramaters Via Steam
 
-- **A setting that can cause mixed performance is the fullscreen or borderless window mode.**
+> *Up next we will look into forcing a display mode via the Steam launch settings.*
 
-> Borderless is a maximized window without borders. Allowing you to move the focus in and out of an application. It reflects the current desktop resolution. If you are running 4K on your desktop, having borderless set for a program will continue with that resolution. 
+> Borderless is a maximized window without borders. Allowing you to move the focus in and out of an application. It reflects the current desktop resolution. If you are running 4K on your desktop, forcing borderless will continue using that resolution. 
 
-> Choosing Fullscreen over Borderless has the potential to boost performance. It allows the application to take control of the display and set a separate resolution. However, it's difficult to shift your focus in and out.
+> Choosing Fullscreen over Borderless has the potential to boost performance. It allows the application to take control and set the displays resolution. However, it's difficult to shift your focus in and out. (ALT-TAB)
 
-- Find Valhiem in your Steam Libary, then **Right Click** -> **Properties...**.
+- In your Steam Library **Right-Click** on **Valheim** & go to **Properties...**.
 
 - **Copy/Paste** this into the **Launch Options** field.
 
@@ -60,11 +62,11 @@ gfx-enable-native-gfx-jobs=1
 -window-mode exclusive -screen-fullscreen
 ```
 
-> This tells Steam the **Windowed Mode** will allow the application to use **Fullscreen** exclusivly.
+> This tells Steam the **Windowed Mode** we want to use is **Fullscreen**.
 
 ## High Priority Mode
 
-**In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.**
+> *In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.*
 
 ### What is High Priority? 
 
@@ -74,15 +76,15 @@ gfx-enable-native-gfx-jobs=1
 
 ### Navigate to the Valheim Directory.
 
-- In your Steam Library Right-Click on Valheim & go to **Manage--->Browse local files**.
+- In your Steam Library **Right-Click** on **Valheim** & go to **Manage--->Browse local files**.
 
-- The **Windows Explorer** window should open to the Valheim directory.
+- **Windows Explorer** should've opened to the games location. 
 
 - Locate the file **valheim.exe**
 
-> *Don’t see **valheim.exe** but see **valheim**? **Hidden Items** aren’t being displayed.*
+> *If you only see **valheim** and don’t see **valheim.exe**. Don't panic you just need to enable showing **[Hidden Items](https://support.microsoft.com/en-us/search?query=how%20to%20view%20hidden%20files%20in%20windows%2010#:~:text=Open%20File%20Explorer%20from%20the,folders%2C%20and%20drives%20and%20OK)**.
 
-> *Look for **Application** in the **Type** column. **(Circled in red in the image below)** That is where you can verify if it’s an **.exe**.*
+> *Look for **Application** in the **Type** column. **(Circled in red in the image below)**. It is a way to verify if it’s an **.exe**.*
 
 - Right-Click on **valheim.exe**
 
@@ -107,7 +109,6 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 ```
 
 > *The **/c** instructs the command prompt to close after executing our command.*
-
 
 ![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-2.jpg?raw=true)
 
