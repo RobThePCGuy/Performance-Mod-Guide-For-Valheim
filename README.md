@@ -1,15 +1,15 @@
 [![GitHub issues](https://img.shields.io/github/issues/ZeroOneZero/Performance-Mod-Guide-For-Valheim?style=for-the-badge)](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/issues)
-**Consider donating a $1 if my guide helped. I’ll use it to buy more coffee!**
+*Consider donating a $1 if my guide helped. I’ll use it to buy more coffee*
 [![GitHub stars](https://img.shields.io/github/stars/ZeroOneZero/Performance-Mod-Guide-For-Valheim?style=for-the-badge)](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/stargazers)
 [![Donate with PayPal](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N86JXA77CARWE)
 
 # Performance Mod Guide For Valheim
 
-**I hope this guide finds all well! It’s not the fix all, end all problems guide, but it’s a start. I aim to preserve the veraciousness of this guide so if you notice any inconsistencies, open an issue through GitHub or [Contact Me](mailto:crazypants010@gmail.com). I welcome any aid.**
+## This guide was designed to be as comprehensive as possible. That is, it contains data gathered, tested, and tried from various internet sources. However, some of this may become obsolete in the future. Please let me know if any information needs to be updated or removed. I am always open to new ideas. I will keep this guide as long as it is necessary. [Contact Me](mailto:crazypants010@gmail.com)
 
-**I have outlined some simple and not so simple steps. I would suggest you read through this first so you know what you’re getting yourself into.**
+## It is divided into sections. You are not required to complete all of the sections; only those that you believe are required. When I reinstall a game after a break, I still start from the beginning. There are both easy and difficult steps. My advice is to read it all the way through first, so you know what you're getting yourself into!
 
-**If you are the type looking for meaning, I recommend visiting [Rob’s Bible](https://github.com/ZeroOneZero/robs-bible).**
+### If you are the type looking for meaning, I recommend visiting [Rob’s Bible](https://github.com/ZeroOneZero/robs-bible).
 
 ![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/image2.jpg?raw=true)
 
@@ -19,15 +19,16 @@
 - Updating Valheim will remove any changes to your **boot.config**, shown below.
 
 # Increase Performance
+
 ## Modify boot.config
 
 > *The file we will edit in this section enables the **GPU [Graphics Processing Unit]** to handle more tasks, reducing the load on the **CPU [Central Processing Unit]**.*
 
 - In your Steam Library **Right-Click** on **Valheim** & go to **Manage--->Browse local files**.
-- **Windows Explorer** should've opened to the games location. 
+- **Windows Explorer** should've opened to the games location.
 - Inside the **valheim_Data** directory is where we'll find our **boot.config**.
 
-```sh
+```text
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 ```
 
@@ -36,29 +37,29 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 > *Personally I use [Notepad++](https://notepad-plus-plus.org/).*
 
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.1.jpg?raw=true)
+
 - Add the following two lines to the **top** of the file **leaving** the original text.
 
-```sh
+```text
 gfx-enable-jobs=1
 gfx-enable-native-gfx-jobs=1
 ```
 
 ![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.2.jpg?raw=true)
+
 - **Save and close** Notepad.
 
 ## Force Display Paramaters Via Steam
 
 > *Up next we will look into forcing a display mode via the Steam launch settings.*
-
-> Borderless is a maximized window without borders. Allowing you to move the focus in and out of an application. It reflects the current desktop resolution. If you are running 4K on your desktop, forcing borderless will continue using that resolution. 
-
+> Borderless is a maximized window without borders. Allowing you to move the focus in and out of an application. It reflects the current desktop resolution. If you are running 4K on your desktop, forcing borderless will continue using that resolution.
 > Choosing Fullscreen over Borderless has the potential to boost performance. It allows the application to take control and set the displays resolution. However, it's difficult to shift your focus in and out. (ALT-TAB)
 
 - In your Steam Library **Right-Click** on **Valheim** & go to **Properties...**.
 
 - **Copy/Paste** this into the **Launch Options** field.
 
-```sh
+```text
 -window-mode exclusive -screen-fullscreen
 ```
 
@@ -68,17 +69,17 @@ gfx-enable-native-gfx-jobs=1
 
 > *In this section, we’ll make a command shortcut that launches Valheim in High Priority from Steam.*
 
-### What is High Priority? 
+### What is High Priority?
 
-> *In Windows, the operating system distributes the computer’s resources based on the priority of the application.* 
+> *In Windows, the operating system distributes the computer’s resources based on the priority of the application.*
 
 > *Higher priority means more resources will go to Valheim.*
 
-### Navigate to the Valheim Directory.
+### Navigate to the Valheim Directory
 
 - In your Steam Library **Right-Click** on **Valheim** & go to **Manage--->Browse local files**.
 
-- **Windows Explorer** should've opened to the games location. 
+- **Windows Explorer** should've opened to the games location.
 
 - Locate the file **valheim.exe**
 
@@ -98,13 +99,13 @@ gfx-enable-native-gfx-jobs=1
 
 - In the **Target** field, leave the original text but type the following before it.
 
-```sh
+```text
 cmd /c start /high Valheim 
 ```
 
 - Here is the full **Target** for your reference.
 
-```sh
+```text
 cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe"
 ```
 
@@ -122,12 +123,13 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 
 - After the **pasted contents**, (*which is the path to our shortcut*), type the following, making sure that there is a space between the two.
 
-```sh
+```text
  %command% -window-mode exclusive -screen-fullscreen
 ```
 
 - Here is the full **Launch Options** for your reference.
-```sh
+
+```text
 
 "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen
 ```
@@ -144,6 +146,7 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 > *If your game isn't loading. **[Verify Files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335)** through Steam.*
 
 ## Preparing Files for Install
+
 ### BepInExPack Valheim
 
 > *What is **BepInEx**? It is a general-purpose framework for Unity modding. Enabling plugins that use **.dll** files.*
@@ -157,7 +160,8 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 [2]:https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/
 
 ### BuildShare & SlimVML
-> *The plugin **BuildShare** allows for the importing and exporting of constructions in the **.vbuild** file format. *
+
+> *The plugin **BuildShare** allows for the importing and exporting of constructions in the **.vbuild** file format.*
 > *However, **SlimVML Mod Loader** is required for it to function.*
 
 - Create an account to download mods from **Nexus**. [Link to Nexus](https://www.nexusmods.com/)
@@ -171,13 +175,11 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 
 [![alt text][1]][2]
 
-[1]:https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/BepInEx-1.jpg?raw=true
-[2]:https://valheim.thunderstore.io/package/BepInEx/SlimVML_Loader/
-
 ## Extracting and Copying Mod Files
+
 - Open **Windows Explorer** and go to **Downloads**.
 
-```sh
+```text
 %USERPROFILE%\Downloads\
 ```
 
@@ -185,7 +187,7 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 - Open **denikson-BepInExPack_Valheim-x.x.xxxx** folder and then **BepInExPack_Valheim**.
 - Inside of **BepInExPack_Valheim**, **Copy--->** all the files and folders and **Paste--->** into the **Valheim** directory.
 
-```sh
+```text
 C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
 
@@ -193,23 +195,27 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim
 - Open the **BepInEx-SlimVML_Loader-x.x.x** folder.
 - Copy the **BepInEx** folder into the Valheim directory.
 
-```sh
+```text
 C:\Program Files (x86)\Steam\steamapps\common\Valheim
 ```
+
 - Extract **BuildShare No Herobrine-x-x-x-xxxxxxxxxx.zip**
 - Copy the **CR-BuildShare_VML.dll** into the **SlimVML** folder located at:
 
-```sh
+```text
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\SlimVML
 ```
 
 ## Using BuildShare
+
 ### Run Valheim & Load a World
+
 - Once loaded up, you’ll see a **BuildShare** button to the left. Click on it and the menu will appear.
 - Select **Build--->Get Builds**
 - An Explorer window and Web Page should appear. If not, minimize or close Valhiem, then you should see them.
 
 ### Download Mods from Nexus
+
 - The [webpage](https://www.nexusmods.com/valheim/mods/categories/10/) that opened will have a search bar at the top.
 - Enter my username [RobsDAPCGuy](https://www.nexusmods.com/valheim/users/70149208?tab%3Duser%2Bfiles=&tab=user+files)
 - Then change the category from **Mods to Users** and click **Search**
@@ -218,15 +224,18 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\SlimVML
 
 - Select a mod from the list.
 - Click on **Manual**, to the right**
-> *Sometimes a **Mod Required** *window will appear.*
+
+> *Sometimes a **Mod Required***window will appear.*
+
 - Click **Download--->Slow Download**
 - Extract it and **Copy-->Paste** the **.vbuild** file to the Explorer window. Or to:
 
-```sh
+```text
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 ```
 
 ## Deploy the Construction Mod
+
 - Find the **Drop-Down** and select the mod you copied.
 - Select **Toggle** to see where the mod will go before you Build it.
 - Once you’ve found a spot, click on **Build**
@@ -241,21 +250,22 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 
 ![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/k7aaffa9lmd61.webp?raw=true)
 
--	Select **Local Computer Policy --> Computer Configuration --> Administrative Templates --> System --> Power Management**
- 
+- Select **Local Computer Policy --> Computer Configuration --> Administrative Templates --> System --> Power Management**
+
  ![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/mpovw2xblmd61.webp?raw=true)
 
 - Double click on **Select an active power plan** setting and change it to match the picture below. **Enabled and High Performance**
- 
+
 ![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/8sklkojdlmd61.webp?raw=true)
 
--	To verify, go to **Settings --> System --> Power & sleep --> Additional power settings** and the option should be greyed out.
+- To verify, go to **Settings --> System --> Power & sleep --> Additional power settings** and the option should be greyed out.
 
 ![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/dx240zyllmd61.webp?raw=true)
 
-•	Now the setting will remain even through Windows and driver updates.
+• Now the setting will remain even through Windows and driver updates.
 
 # Additional Launch Options
+
 > *On my PC **-force-vulcan** makes it run worse. I run at 4k maxed following the steps in this guide. Experiment and figure out which one works best for your setup.*
 
 | Launch Options | Description | Usefulness |
@@ -270,11 +280,13 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\BuildShare\Builds
 | -force-d3d9 | Run a game using DirectX 9 | Not sure. Need testers. |"
 
 > *Not using Steam Launch Options? Try this in the shortcuts **Target** field*
-```sh
+
+```text
 cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive -screen-fullscreen
 ```
 
 # Edits - Sources - Thanks
+
 *Thank [Reddit user RustyB3ans for the boot.config fixes](https://www.reddit.com/user/RustyB3ans/)*
 
 *I combined two posts to make the auto high priority fix. Reddit user [1000AngryTrashBees](https://www.reddit.com/user/1000AngryTrashBees/) and Reddit user [DerBoeseWolf](https://www.reddit.com/user/DerBoeseWolf/)*
@@ -282,8 +294,6 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 *Launch Options I paraphrased from the [Unity Guide](https://docs.unity3d.com/Manual/CommandLineArguments.html)*
 
 *Here is my email if you wish to ask about something else.*
-
-
 
 | Mods I Use |
 | ---------- |
@@ -303,6 +313,5 @@ cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valhei
 | Unrestricted Portals |
 | Valheim - Interact While Building |
 | Valheim Performance Optimizations |
-
 
 Copyright [2022] [Robert Adams]
