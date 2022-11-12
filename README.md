@@ -1,13 +1,13 @@
 [![GitHub issues](https://img.shields.io/github/issues/ZeroOneZero/Performance-Mod-Guide-For-Valheim?style=for-the-badge)](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/issues)
-*Consider donating a $1 if my guide helped. I’ll use it to buy more coffee*
+**Consider donating a $1 if my guide helped. I’ll use it to buy more coffee**
 [![GitHub stars](https://img.shields.io/github/stars/ZeroOneZero/Performance-Mod-Guide-For-Valheim?style=for-the-badge)](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/stargazers)
 [![Donate with PayPal](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N86JXA77CARWE)
 
 # Performance Mod Guide For Valheim
 
-## This guide was designed to be as comprehensive as possible. That is, it contains data gathered, tested, and tried from various internet sources. However, some of this may become obsolete in the future. Please let me know if any information needs to be updated or removed. I am always open to new ideas. I will keep this guide as long as it is necessary. [Contact Me](mailto:crazypants010@gmail.com)
+### This guide was designed to be as comprehensive as possible. That is, it contains data gathered, tested, and tried from various internet sources. However, some of this may become obsolete in the future. Please let me know if any information needs to be updated or removed. I am always open to new ideas. I will keep this guide as long as it is necessary. [Contact Me](mailto:crazypants010@gmail.com)
 
-## It is divided into sections. You are not required to complete all of the sections; only those that you believe are required. When I reinstall a game after a break, I still start from the beginning. There are both easy and difficult steps. My advice is to read it all the way through first, so you know what you're getting yourself into!
+### It is divided into sections. You are not required to complete all of the sections; only those that you believe are required. When I reinstall a game after a break, I still start from the beginning. There are both easy and difficult steps. My advice is to read it all the way through first, so you know what you're getting yourself into!
 
 ### If you are the type looking for meaning, I recommend visiting [Rob’s Bible](https://github.com/ZeroOneZero/robs-bible).
 
