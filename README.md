@@ -4,12 +4,11 @@
 [![Donate with PayPal](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N86JXA77CARWE)
 
 # Performance Mod Guide For Valheim
+- The goal of this guide is to provide a centralized location with as much comprehensive information as possible, utilizing data collected and tested from various internet sources. However, due to the possibility of certain information becoming outdated in the future, please inform me of any necessary updates or removals. I welcome new ideas and will maintain this guide as long as it remains relevant. **[Contact Me](mailto:crazypants010@gmail.com)**
 
-### This guide was designed to be as comprehensive as possible. That is, it contains data gathered, tested, and tried from various internet sources. However, some of this may become obsolete in the future. Please let me know if any information needs to be updated or removed. I am always open to new ideas. I will keep this guide as long as it is necessary. [Contact Me](mailto:crazypants010@gmail.com)
+- My guide is segmented into different sections, and it is not mandatory to complete all of them - only those that you deem necessary. After a hiatus, I personally start from the beginning and run the whole thing. Included here will be both easy and challenging steps, so I suggest reading through it in its entirety first to gain a full understanding of what you're undertaking.
 
-### It is divided into sections. You are not required to complete all of the sections; only those that you believe are required. When I reinstall a game after a break, I still start from the beginning. There are both easy and difficult steps. My advice is to read it all the way through first, so you know what you're getting yourself into!
-
-### If you are the type looking for meaning, I recommend visiting [Rob’s Bible](https://github.com/ZeroOneZero/robs-bible).
+*For those seeking meaning, I suggest visiting* **[Rob’s Bible](https://github.com/ZeroOneZero/robs-bible).**
 
 ![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/image2.jpeg?raw=true)
 
