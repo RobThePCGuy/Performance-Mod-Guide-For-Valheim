@@ -2,9 +2,9 @@
 
 --- 
 
-> This guide aims to be a one-stop shop for Valheims' perfomrace related issue and fixes. However, please be aware that, things change, so if you see something that needs updating or fixing, let me know. I'm always open to new ideas and will keep this guide fresh as long as it's useful. Got questions or suggestions? Feel free to reach out.
+>  This guide aims to be a one-stop shop for Valheim's performance-related issues and fixes. However, please be aware that, things change, so if you see something that needs updating or fixing, let me know. I'm always open to new ideas and will keep this guide fresh as long as it's useful. Got questions or suggestions? Feel free to reach out.
 
-> You'll find the guide broken down into sections. You don't have to go through all of them – just pick what works for you. Whenever I come back to it after a break, I like to start from the top and do the whole thing. There's a mix of easy and tough steps here, so it's a good idea to read through the whole thing first to know what you're getting into.
+> You'll find the guide broken down into sections. You don't have to go through all of them; just pick what works for you. Whenever I come back to it after a break, I like to start from the top and do the whole thing. There's a mix of easy and tough steps here, so it's a good idea to read through the whole thing first to know what you're getting into.
 
 ---
 
@@ -96,7 +96,7 @@ A higher priority means more resources will be allocated to Valheim.
 
 5. Right-click the valheim shortcut and choose Properties.
 
-6. In the Target field, leave the original text intact and type the following before it:
+6. In the Target field, leave the original text intact and type the following before it making sure to leave a space between the two.
 
 ```
 cmd /c start /high Valheim
