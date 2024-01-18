@@ -179,15 +179,16 @@ cmd /c start /high Valheim
 ![Power Policy](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy.png?raw=true)
 
 3. Double-click on Select an active power plan setting and change it as shown in the picture below: Enabled and High Performance.
+
 ![Power Policy Setting](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy-setting.png?raw=true)
 
-4. To verify in Windows 11, press ```Windows Key + R``` and type: ```control /name Microsoft.PowerOptions```. This will open the Power Options control panel directly. 
+4. To verify in Windows 11, press ```Windows Key``` + ```R``` and type: ```control /name Microsoft.PowerOptions```. This will open the Power Options control panel directly. 
 
 ![Power Options Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-options-run-gui.png?raw=true)
 
-5. In the Additional power settings. You will see, High Performance with the option to change it greyed out.
+5. In the Additional power settings. You will see High Performance, with the option to change it greyed out.
 
-> This setting will now remain consistent even through Windows and driver updates.
+6. This setting will now remain consistent even through Windows and driver updates.
 
 # Additional Launch Options
 
