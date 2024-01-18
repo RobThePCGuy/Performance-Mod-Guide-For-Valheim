@@ -119,13 +119,14 @@ A higher priority means more resources will be allocated to Valheim.
 4. Disable this option.
 5. Click 'OK' to apply the changes.
 ```
+
+6. **Right-click** ```valheim.exe```, select **Create shortcut**, and rename the new shortcut simply to ```valheim```.
+
 ![Valheim Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-shortcut.png?raw=true)
 
-5. **Right-click** ```valheim.exe```, select **Create shortcut**, and rename the new shortcut simply to ```valheim```.
+7. **Right-click** on the newly created, and renamed shortcut file, ```valheim```, choose **Properties**.
 
-6. **Right-click** on the newly created, and renamed shortcut file, ```valheim```, choose **Properties**.
-
-7. In the **Target field**, leave the original text intact and type the following before it making sure to leave a space between the two.
+8. In the **Target field**, leave the original text intact and type the following before it making sure to leave a space between the two.
 
 ```
 cmd /c start /high Valheim
