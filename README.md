@@ -98,7 +98,7 @@ A higher priority means more resources will be allocated to Valheim.
 3. If you cannot see ```valheim.exe```, then must enable the showing of known extension types.
 
 4. The steps are a bit different depending on if you are running Windows 10 or 11. Follow along:
-  a. Windows 11:
+- Windows 11:
 
 ```
 1. Open File Explorer (WIN+E)
@@ -110,7 +110,7 @@ A higher priority means more resources will be allocated to Valheim.
 7. Click 'OK' to apply the changes.
 ```
 
-  b. Windows 10:
+- Windows 10:
 
 ```
 1. Open File Explorer.
