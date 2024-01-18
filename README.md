@@ -154,13 +154,13 @@ cmd /c start /high Valheim
 "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen -force-vulkan -console
 ```
 
-![Task Manger](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-task-manager.png?raw=true)
+![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-steam-launch-options.png?raw=true)
 
 > **Note:** ```-force-vulkan``` and ```-console``` are optional. These are covered in more detail at the end of this README.
 
-![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-steam-launch-options.png?raw=true)
+14. Valheim will now run using a High Base priority. This you can verify after launching the game by following these instructions: [How to Geek: Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
 
-> Valheim will now run using a High Base priority. This you can verify after launching the game by following these instructions: [How to Geek: Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
+![Task Manger](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-task-manager.png?raw=true)
 
 ## Force High Performance Power Option
 
