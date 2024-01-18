@@ -8,7 +8,7 @@
 
 ---
 
-![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-pic.png?raw=true)
+[Viking](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-pic.png?raw=true)
 
 ---
 
@@ -36,22 +36,33 @@
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 ```
 
-4. Locate and edit the **boot.config** file using either [Notepad](https://www.howtogeek.com/672710/why-notepad-is-still-awesome-for-taking-notes/) or [Notepad++](https://notepad-plus-plus.org/).
+4. Open the `boot.config` file in a text editor of your choice. This could be Notepad on Windows, TextEdit on macOS, or any other text editor that you prefer.
 
 > Personally, I use [Notepad++](https://notepad-plus-plus.org/).
 
 [valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
 
-5. Add the following two lines to the **top** of the file, **leaving** the original text intact.
+5. Once the file is open, press enter (to create a new line) and move the cursor to the very beginning of the text; top line.
+
+6. Type or copy and paste the following lines at the top of the file:
 
 ```
 gfx-enable-jobs=1
 gfx-enable-native-gfx-jobs=1
 ```
 
-[Boot Config Added Entries](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config-changes.png?raw=true)
+7. Save the changes to the `boot.config` file, then close the text editor.
 
-6. **Save and close** Notepad.
+> Your `boot.config` file should now look something like this:
+
+```
+gfx-enable-jobs=1
+gfx-enable-native-gfx-jobs=1
+wait-for-native-debugger=0
+hdr-display-enabled=0
+gc-max-time-slice=3
+build-guid=xxx
+```
 
 ## Force Display Paramaters Via Steam
 
