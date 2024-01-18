@@ -1,4 +1,4 @@
-.gitignore
-.github/ISSUE_TEMPLATE
-.vs
-images
+/.gitignore
+.github/ISSUE_TEMPLATE/
+.vs/
+images/
