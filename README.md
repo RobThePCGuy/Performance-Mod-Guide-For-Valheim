@@ -95,19 +95,36 @@ A higher priority means more resources will be allocated to Valheim.
 
 2. Windows **Explorer** should have opened to the game's location.
 
-3. Locate the file valheim.exe.
+3. If you cannot see ```valheim.exe```, then must enable the showing of known extension types.
 
-> If you only see valheim and don’t see valheim.exe, don't panic. You just need to enable showing [Hidden Items](https://support.microsoft.com/en-us/search?query=how%20to%20view%20hidden%20files%20in%20windows%2010#:~:text=Open%20File%20Explorer%20from%20the,folders%2C%20and%20drives%20and%20OK).
+4. The steps are a bit different depending on if you are running Windows 10 or 11. Follow along:
+  a. Windows 11:
 
-> Look for Application in the Type column (circled in red in the image below). This is a way to verify if it’s an .exe.
+```
+1. Open File Explorer (WIN+E)
+2. Click on the three dots icon (●●●) at the top to open the 'More options' menu.
+3. Select 'Options' to open the Folder Options dialog.
+4. In the Folder Options dialog, go to the 'View' tab.
+5. Under 'Advanced settings', you'll find an option that says 'Hidden files and folders'.
+6. Select 'Show hidden files, folders, and drives'.
+7. Click 'OK' to apply the changes.
+```
 
-4. Right-click on valheim.exe, select Create shortcut, then rename the created shortcut to valheim.
+  b. Windows 10:
+
+```
+1. Open File Explorer.
+2. Click on the 'View' tab in the top menu.
+3. In the 'Show' section, there's a checkbox for 'Hidden items'. Check this box to show hidden files, folders, and drives.
+```
+
+5. **Right-click** ```valheim.exe```, select **Create shortcut**, and rename the new shortcut simply to ```valheim```.
 
 ![Valheim Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-shortcut.png?raw=true)
 
-5. Right-click the ```valheim``` shortcut and choose Properties.
+6. **Right-click** on the newly created, and renamed shortcut file, ```valheim```, choose **Properties**.
 
-6. In the Target field, leave the original text intact and type the following before it making sure to leave a space between the two.
+7. In the **Target field**, leave the original text intact and type the following before it making sure to leave a space between the two.
 
 ```
 cmd /c start /high Valheim
@@ -117,34 +134,33 @@ cmd /c start /high Valheim
 
 > The /c instructs the command prompt to close after executing our command.
 
-7. Click OK when finished.
+8. Click ```OK``` when finished.
 
-8. Back at the Valheim directory, hold down the SHIFT key and right-click on the Valheim shortcut.
+9. Back in the Valheim directory, hold down ```SHIFT``` + ```Right-click``` on the newly edited valheim shortcut.
 
-9. Select Copy as path.
+10. Select **Copy as path**
 
-10. Open Steam again and paste the clipboard contents into the Valheim Launch Options.
-
-11. After the pasted contents (which is the path to our shortcut), type the following, ensuring there is a space between the two:
+11. Go back to Steam, open the Launch Options for Valheim, and paste our clipboard contents.
 
 ```
-%command% -window-mode exclusive -screen-fullscreen -force-vulkan -console
+"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk"
 ```
 
-> **Note:** ```-force-vulkan``` and ```-console``` are optional. These are covered in more detail at the end of this README.
+12. Press the spacebar then type: ```%command%```, after it.
 
-![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-steam-launch-options.png?raw=true)
-
-> Here is the whole text, as it may look to you:
+13. If you were following along since the start your Launch Options should look like this:
 
 ```
 "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen -force-vulkan -console
 ```
 
-> Now, all you have to do is run Valheim, you can verify that valheim.exe has a High Base priority in the [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
-
 ![Task Manger](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-task-manager.png?raw=true)
 
+> **Note:** ```-force-vulkan``` and ```-console``` are optional. These are covered in more detail at the end of this README.
+
+![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-steam-launch-options.png?raw=true)
+
+> Valheim will now run using a High Base priority. This you can verify after launching the game by following these instructions: [How to Geek: Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
 
 ## Force High Performance Power Option
 
@@ -165,7 +181,7 @@ cmd /c start /high Valheim
 
 4. To verify in Windows 11, press ```Windows Key + R``` and type: ```control /name Microsoft.PowerOptions```. This will open the Power Options control panel directly. 
 
-!![Power Options Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-options-run-gui.png?raw=true)
+![Power Options Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-options-run-gui.png?raw=true)
 
 5. In the Additional power settings. You will see, High Performance with the option to change it greyed out.
 
