@@ -36,11 +36,11 @@
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 ```
 
+![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
+
 4. Open the `boot.config` file in a text editor of your choice. This could be Notepad on Windows, TextEdit on macOS, or any other text editor that you prefer.
 
 > Personally, I use [Notepad++](https://notepad-plus-plus.org/).
-
-![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
 
 5. Once the file is open, press enter (to create a new line) and move the cursor to the very beginning of the text; top line.
 
