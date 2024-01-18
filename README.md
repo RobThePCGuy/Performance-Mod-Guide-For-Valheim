@@ -122,7 +122,7 @@ A higher priority means more resources will be allocated to Valheim.
 
 5. **Right-click** ```valheim.exe```, select **Create shortcut**, and rename the new shortcut simply to ```valheim```.
 
-![Valheim Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-shortcut.png?raw=true)
+![Valheim Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-short.png?raw=true)
 
 6. **Right-click** on the newly created, and renamed shortcut file, ```valheim```, choose **Properties**.
 
@@ -132,7 +132,7 @@ A higher priority means more resources will be allocated to Valheim.
 cmd /c start /high Valheim
 ```
 
-![Shortcut Targer](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-short.png?raw=true)
+![Shortcut Target](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-shortcut.png?raw=true)
 
 > The /c instructs the command prompt to close after executing our command.
 
