@@ -95,7 +95,7 @@ A higher priority means more resources will be allocated to Valheim.
 
 2. Windows **Explorer** should have opened to the game's location.
 
-3. If you cannot see ```valheim.exe```, then must enable the showing of known extension types.
+3. If you cannot see ```valheim.exe```, then must disable hiding known file type extensions.
 
 4. The steps are a bit different depending on if you are running Windows 10 or 11. Follow along:
 - Windows 11:
@@ -105,8 +105,8 @@ A higher priority means more resources will be allocated to Valheim.
 2. Click on the three dots icon (●●●) at the top to open the 'More options' menu.
 3. Select 'Options' to open the Folder Options dialog.
 4. In the Folder Options dialog, go to the 'View' tab.
-5. Under 'Advanced settings', you'll find an option that says 'Hidden files and folders'.
-6. Select 'Show hidden files, folders, and drives'.
+5. Under 'Advanced settings', you'll find an option that says 'Hide extensions for known file types'.
+6. Disable this option.
 7. Click 'OK' to apply the changes.
 ```
 
@@ -114,8 +114,10 @@ A higher priority means more resources will be allocated to Valheim.
 
 ```
 1. Open File Explorer.
-2. Click on the 'View' tab in the top menu.
-3. In the 'Show' section, there's a checkbox for 'Hidden items'. Check this box to show hidden files, folders, and drives.
+2. Click on the 'View' tab in the top menu (You may need to press the ALT key to show the top menu).
+3. Under 'Advanced settings', you'll find an option that says 'Hide extensions for known file types'.
+4. Disable this option.
+5. Click 'OK' to apply the changes.
 ```
 
 5. **Right-click** ```valheim.exe```, select **Create shortcut**, and rename the new shortcut simply to ```valheim```.
