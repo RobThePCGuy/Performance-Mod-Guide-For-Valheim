@@ -8,7 +8,7 @@
 
 ---
 
-![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/image2.jpeg?raw=true)
+![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/Valheim-PIC.jpg?raw=true)
 
 ---
 
