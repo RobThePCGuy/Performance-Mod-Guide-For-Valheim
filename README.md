@@ -8,7 +8,7 @@
 
 ---
 
-[Viking](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-pic.png?raw=true)
+![Viking](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-pic.png?raw=true)
 
 ---
 
@@ -40,7 +40,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 
 > Personally, I use [Notepad++](https://notepad-plus-plus.org/).
 
-[valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
+![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
 
 5. Once the file is open, press enter (to create a new line) and move the cursor to the very beginning of the text; top line.
 
@@ -103,7 +103,7 @@ A higher priority means more resources will be allocated to Valheim.
 
 4. Right-click on valheim.exe, select Create shortcut, then rename the created shortcut to valheim.
 
-[Valheim Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-shortcut.png?raw=true)
+![Valheim Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-shortcut.png?raw=true)
 
 5. Right-click the ```valheim``` shortcut and choose Properties.
 
@@ -113,7 +113,7 @@ A higher priority means more resources will be allocated to Valheim.
 cmd /c start /high Valheim
 ```
 
-[Shortcut Targer](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-short.png?raw=true)
+![Shortcut Targer](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-short.png?raw=true)
 
 > The /c instructs the command prompt to close after executing our command.
 
@@ -133,7 +133,7 @@ cmd /c start /high Valheim
 
 > **Note:** ```-force-vulkan``` and ```-console``` are optional. These are covered in more detail at the end of this README.
 
-[Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-steam-launch-options.png?raw=true)
+![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-steam-launch-options.png?raw=true)
 
 > Here is the whole text, as it may look to you:
 
@@ -143,7 +143,7 @@ cmd /c start /high Valheim
 
 > Now, all you have to do is run Valheim, you can verify that valheim.exe has a High Base priority in the [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
 
-[Task Manger](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-task-manager.png?raw=true)
+![Task Manger](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-task-manager.png?raw=true)
 
 
 ## Force High Performance Power Option
@@ -154,18 +154,18 @@ cmd /c start /high Valheim
 
 1. Press Windows Key + R and type in gpedit.msc.
 
-[Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/run-dialog.png?raw=true)
+![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/run-dialog.png?raw=true)
 
 2. Navigate to Local Computer Policy --> Computer Configuration --> Administrative Templates --> System --> Power Management.
 
-[Power Policy](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy.png?raw=true)
+![Power Policy](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy.png?raw=true)
 
 3. Double-click on Select an active power plan setting and change it as shown in the picture below: Enabled and High Performance.
-[Power Policy Setting](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy-setting.png?raw=true)
+![Power Policy Setting](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy-setting.png?raw=true)
 
 4. To verify in Windows 11, press ```Windows Key + R``` and type: ```control /name Microsoft.PowerOptions```. This will open the Power Options control panel directly. 
 
-[Power Options Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-options-run-gui.png?raw=true)
+!![Power Options Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-options-run-gui.png?raw=true)
 
 5. In the Additional power settings. You will see, High Performance with the option to change it greyed out.
 
