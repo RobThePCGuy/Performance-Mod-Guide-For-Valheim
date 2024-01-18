@@ -8,7 +8,7 @@
 
 ---
 
-![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/Valheim-PIC.jpg?raw=true)
+![Caution](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-pic.png?raw=true)
 
 ---
 
@@ -40,7 +40,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 
 > Personally, I use [Notepad++](https://notepad-plus-plus.org/).
 
-![alt text](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.1.jpeg?raw=true)
+[valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
 
 5. Add the following two lines to the **top** of the file, **leaving** the original text intact.
 
@@ -49,7 +49,7 @@ gfx-enable-jobs=1
 gfx-enable-native-gfx-jobs=1
 ```
 
-![Boot Config, Added Entries](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.2.jpeg?raw=true)
+[Boot Config Added Entries](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config-changes.png?raw=true)
 
 6. **Save and close** Notepad.
 
@@ -90,11 +90,11 @@ A higher priority means more resources will be allocated to Valheim.
 
 > Look for Application in the Type column (circled in red in the image below). This is a way to verify if it’s an .exe.
 
-![Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-1.jpeg?raw=true)
-
 4. Right-click on valheim.exe, select Create shortcut, then rename the created shortcut to valheim.
 
-5. Right-click the valheim shortcut and choose Properties.
+[Valheim Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-shortcut.png?raw=true)
+
+5. Right-click the ```valheim``` shortcut and choose Properties.
 
 6. In the Target field, leave the original text intact and type the following before it making sure to leave a space between the two.
 
@@ -102,7 +102,7 @@ A higher priority means more resources will be allocated to Valheim.
 cmd /c start /high Valheim
 ```
 
-![alt text](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-2.jpeg?raw=true)
+[Shortcut Targer](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-short.png?raw=true)
 
 > The /c instructs the command prompt to close after executing our command.
 
@@ -117,18 +117,23 @@ cmd /c start /high Valheim
 11. After the pasted contents (which is the path to our shortcut), type the following, ensuring there is a space between the two:
 
 ```
-%command% -window-mode exclusive -screen-fullscreen
+%command% -window-mode exclusive -screen-fullscreen -force-vulkan -console
 ```
 
-[Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/cs-3.jpeg?raw=true)
+> **Note:** ```-force-vulkan``` and ```-console``` are optional. These are covered in more detail at the end of this README.
 
-> Here is what that may look like for you:
+[Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-steam-launch-options.png?raw=true)
+
+> Here is the whole text, as it may look to you:
 
 ```
-"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen
+"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen -force-vulkan -console
 ```
 
 > Now, all you have to do is run Valheim, you can verify that valheim.exe has a High Base priority in the [Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
+
+[Task Manger](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-task-manager.png?raw=true)
+
 
 ## Force High Performance Power Option
 
@@ -138,20 +143,20 @@ cmd /c start /high Valheim
 
 1. Press Windows Key + R and type in gpedit.msc.
 
-![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/k7aaffa9lmd61.jpeg?raw=true)
+[Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/run-dialog.png?raw=true)
 
 2. Navigate to Local Computer Policy --> Computer Configuration --> Administrative Templates --> System --> Power Management.
 
-![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/mpovw2xblmd61.jpeg?raw=true)
+[Power Policy](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy.png?raw=true)
 
 3. Double-click on Select an active power plan setting and change it as shown in the picture below: Enabled and High Performance.
+[Power Policy Setting](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy-setting.png?raw=true)
 
-![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/8sklkojdlmd61.jpeg?raw=true)
+4. To verify in Windows 11, press ```Windows Key + R``` and type: ```control /name Microsoft.PowerOptions```. This will open the Power Options control panel directly. 
 
-4. To verify the change, go to Settings --> System --> Power & sleep --> Additional power settings. The option should now be greyed out.
+[Power Options Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-options-run-gui.png?raw=true)
 
-![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/dx240zyllmd61.jpeg?raw=true)
- Gui
+5. In the Additional power settings. You will see, High Performance with the option to change it greyed out.
 
 > This setting will now remain consistent even through Windows and driver updates.
 
@@ -174,7 +179,7 @@ However, each user will experience different results; it is important to experim
 > From the command prompt or by creating a Windows shortcut, the following command should achieve the same result without the need for Steam.
 
 ```
-cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive -screen-fullscreen
+cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive -screen-fullscreen -force-vulkan -console
 ```
 
 ---
