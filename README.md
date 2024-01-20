@@ -26,7 +26,7 @@
 
 > The first file to edit enables the GPU [Graphics Processing Unit] to handle more tasks, thereby reducing the load on the CPU [Central Processing Unit]
 
-1. In your Steam Library, ```Right-Click``` on **Valheim** and go to ```Manage```--->```Browse Local Files```.
+1. In your Steam Library, ```Right-Click```, on **Valheim** and go to ```Manage```--->```Browse Local Files```.
 
 2. Windows **Explorer** should have opened to the location of Valheim.
 
