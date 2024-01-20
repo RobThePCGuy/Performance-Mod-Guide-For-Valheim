@@ -2,7 +2,7 @@
 
 --- 
 
->  This guide aims to be a one-stop shop for Valheim's performance-related issues and fixes. However, please be aware that, things change, so if you see something that needs updating or fixing, let me know. I'm always open to new ideas and will keep this guide fresh as long as it's useful. Got questions or suggestions? Feel free to reach out.
+> This guide aims to be a one-stop shop for Valheim's performance-related issues and fixes. However, please be aware that things change, so if you see something that needs updating or fixing, please let me know. I'm always open to new ideas and will keep this guide fresh as long as it's useful. Got questions or suggestions? Feel free to reach out.
 
 > You'll find the guide broken down into sections. You don't have to go through all of them; just pick what works for you. Whenever I come back to it after a break, I like to start from the top and do the whole thing. There's a mix of easy and tough steps here, so it's a good idea to read through the whole thing first to know what you're getting into.
 
@@ -12,7 +12,7 @@
 
 ---
 
-## A Couple Things to Note:
+## A Couple of Things to Note:
 
 > While in-game, pressing ```F2``` will display a GUI with some additional information, like FPS [Frames per Second].
 
@@ -26,11 +26,11 @@
 
 > The first file to edit enables the GPU [Graphics Processing Unit] to handle more tasks, thereby reducing the load on the CPU [Central Processing Unit]
 
-1. In your Steam Library, **Right-Click**, on **Valheim** and go to ```Manage```--->```Browse Local Files```.
+1. In your Steam Library, ```Right-Click``` on **Valheim** and go to ```Manage```--->```Browse Local Files```.
 
 2. Windows **Explorer** should have opened to the location of Valheim.
 
-3. Inside the **valheim_Data** directory, you will find the ```boot.config``` file.
+3. Inside the ```valheim_Data``` directory, you will find the ```boot.config``` file.
 
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
@@ -38,11 +38,11 @@ C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
 
 ![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
 
-4. Open the `boot.config` file in a text editor of your choice. This could be Notepad on Windows, TextEdit on macOS, or any other text editor that you prefer.
+4. Open the ```boot.config``` file in a text editor of your choice. This could be Notepad on Windows, TextEdit on macOS, or any other text editor that you prefer.
 
 > Personally, I use [Notepad++](https://notepad-plus-plus.org/).
 
-5. Once the file is open, press enter (to create a new line) and move the cursor to the very beginning of the text; top line.
+5. Once the file is open, press the ```Enter``` key (to create a new line) and move the cursor to the very beginning of the text; top line.
 
 6. Type or copy and paste the following lines at the top of the file:
 
@@ -51,9 +51,9 @@ gfx-enable-jobs=1
 gfx-enable-native-gfx-jobs=1
 ```
 
-7. Save the changes to the `boot.config` file, then close the text editor.
+7. Save the changes to the ```boot.config``` file, then close the text editor.
 
-> Your `boot.config` file should now look something like this:
+> Your ```boot.config``` file should now look something like this:
 
 ```
 gfx-enable-jobs=1
@@ -64,13 +64,13 @@ gc-max-time-slice=3
 build-guid=xxx
 ```
 
-## Force Display Paramaters Via Steam
+## Force Display Parameters via Steam
 
 > Borderless window mode is a maximized window without borders, allowing you to move the focus in and out of an application. It reflects the current desktop resolution. For example, if you are running 4K on your desktop, forcing borderless will continue using that resolution.
 
-> Choosing Fullscreen over Borderless has the potential to boost performance, as it allows the application to take control and set the display's resolution. However, it's difficult to shift your focus in and out (e.g., using ALT-TAB).
+> Choosing Fullscreen over Borderless has the potential to boost performance, as it allows the application to take control and set the display's resolution. However, it's difficult to shift your focus in and out (e.g., using ```ALT``` + ```TAB``` ).
 
-1. In your Steam Library, right-click on **Valheim** and go to **Properties**.
+1. In your Steam Library, ```Right-Click``` on **Valheim** and go to **Properties**.
 
 2. **Copy/Paste** the following into the **Launch Options** field.
 
@@ -91,23 +91,23 @@ A higher priority means more resources will be allocated to Valheim.
 
 ## Creating a Command Shortcut
 
-1. In your Steam Library, right-click on Valheim and go to ```Manage``` ---> ```Browse Local Files```.
+1. In your Steam Library, ```Right-click``` on Valheim and go to ```Manage``` ---> ```Browse Local Files```.
 
 2. Windows **Explorer** should have opened to the game's location.
 
-3. If you cannot see ```valheim.exe```, then must disable hiding known file type extensions.
+3. If you cannot see ```valheim.exe```,  you must disable hiding known file type extensions.
 
 4. The steps are a bit different depending on if you are running Windows 10 or 11. Follow along:
 - Windows 11:
 
 ```
-1. Open File Explorer (WIN+E)
-2. Click on the three dots icon (●●●) at the top to open the 'More options' menu.
-3. Select 'Options' to open the Folder Options dialog.
-4. In the Folder Options dialog, go to the 'View' tab.
-5. Under 'Advanced settings', you'll find an option that says 'Hide extensions for known file types'.
+1. Open File Explorer ( ```WIN``` + ```E``` )
+2. Click on the three dots icon ( ```●●●``` ) at the top to open the **More options** menu.
+3. Select ```Options``` to open the **Folder Options** dialog.
+4. In the **Folder Options* dialog, go to the ```View``` tab.
+5. Under ```Advanced settings```, you'll find an option that says ```Hide extensions for known file types```.
 6. Disable this option.
-7. Click 'OK' to apply the changes.
+7. Click ```OK``` to apply the changes.
 ```
 
 - Windows 10:
@@ -120,11 +120,11 @@ A higher priority means more resources will be allocated to Valheim.
 5. Click 'OK' to apply the changes.
 ```
 
-6. **Right-click** ```valheim.exe```, select **Create shortcut**, and rename the new shortcut simply to ```valheim```.
+6. ```Right-click``` on **valheim.exe** and select **Create shortcut** then, rename the new shortcut simply to ```valheim```.
 
 ![Valheim Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-shortcut.png?raw=true)
 
-7. **Right-click** on the newly created, and renamed shortcut file, ```valheim```, choose **Properties**.
+7. ```Right-click``` on the newly created, and renamed shortcut file, ```valheim```, choose **Properties**.
 
 8. In the **Target field**, leave the original text intact and type the following before it making sure to leave a space between the two.
 
@@ -170,15 +170,15 @@ cmd /c start /high Valheim
 
 **Note: Group Policy cannot be used on Windows 10 or 11 Home edition.**
 
-1. Press Windows Key + R and type in gpedit.msc.
+1. Press ```Windows Key``` + ```R```, and type in gpedit.msc.
 
 ![Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/run-dialog.png?raw=true)
 
-2. Navigate to Local Computer Policy --> Computer Configuration --> Administrative Templates --> System --> Power Management.
+2. Navigate to ```Local Computer Policy``` --> ```Computer Configuration``` --> ```Administrative Templates``` --> ```System``` --> ```Power Management```.
 
 ![Power Policy](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy.png?raw=true)
 
-3. Double-click on Select an active power plan setting and change it as shown in the picture below: Enabled and High Performance.
+3. ```Double-click``` on **Select an active power plan** setting and change it as shown in the picture below: ```Enabled``` and ```High Performance```.
 
 ![Power Policy Setting](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-policy-setting.png?raw=true)
 
@@ -186,7 +186,7 @@ cmd /c start /high Valheim
 
 ![Power Options Run Gui](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/power-options-run-gui.png?raw=true)
 
-5. In the Additional power settings. You will see High Performance, with the option to change it greyed out.
+5. In the Additional power settings. You will see **High Performance**, with the option to change it greyed out.
 
 6. This setting will now remain consistent even through Windows and driver updates.
 
