@@ -74,11 +74,7 @@ build-guid=xxx
 
 2. **Copy/Paste** the following into the **Launch Options** field.
 
-```
--window-mode exclusive -screen-fullscreen
-```
-
-> This tells Steam the **Windowed Mode** we want to use is an **Exclusive Fullscreen**.
+```-window-mode exclusive``` or ```-window-mode borderless```
 
 ## High Priority Mode
 
@@ -150,15 +146,16 @@ cmd /c start /high Valheim
 
 12. Press the spacebar then type: ```%command%```, after it.
 
-13. If you were following along since the start your Launch Options should look like this:
+13. If you were following along from the start, your Launch Options should look like this:
 
 ```
-"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -screen-fullscreen -force-vulkan -console
+"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -window-mode exclusive -force-vulkan -console
 ```
 
 ![Launch Options](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-steam-launch-options.png?raw=true)
 
-> **Note:** ```-force-vulkan``` and ```-console``` are optional. These are covered in more detail at the end of this README.
+> [!NOTE]
+> ```-force-vulkan``` and ```-console``` are optional. These are covered in more detail at the end of this README.
 
 14. Valheim will now run using a High Base priority. This you can verify after launching the game by following these instructions: [How to Geek: Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/).
 
@@ -192,8 +189,8 @@ cmd /c start /high Valheim
 
 # Additional Launch Options
 
-> I use ```-force-vulkan```, and allow the game to control the **window mode** via ```-window-mode exclusive```. \
-However, each user will experience different results; it is important to experiment and find out what works best. Below are a few other Launch Options:
+> I use ```-force-vulkan```, and ```-window-mode borderless``` because I am always using ```ALT```+```Tab```.
+> However, each user will experience different results; it is important to experiment and find out what works best. Below are a few other Launch Options:
 
 | Launch Options                          | Description                                         |
 |-----------------------------------------|-----------------------------------------------------|
@@ -205,12 +202,6 @@ However, each user will experience different results; it is important to experim
 | -force-d3d11                            | Run a game using DirectX 11                         |
 | -force-d3d12                            | Run a game using DirectX 12                         |
 | -force-vulkan                           | Force use of Vulkan for rendering which can reduce the CPU bottleneck                         |
-
-> From the command prompt or by creating a Windows shortcut, the following command should achieve the same result without the need for Steam.
-
-```
-cmd /c start /high Valheim "C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.exe" -window-mode exclusive -screen-fullscreen -force-vulkan -console
-```
 
 ---
 
