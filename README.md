@@ -94,35 +94,30 @@ A higher priority means more resources will be allocated to Valheim.
 3. If you cannot see ```valheim.exe```,  you must disable hiding known file type extensions.
 
 4. The steps are a bit different depending on if you are running Windows 10 or 11. Follow along:
-- Windows 11:
 
-```
-1. Open File Explorer ( ```WIN``` + ```E``` )
-2. Click on the three dots icon ( ```●●●``` ) at the top to open the **More options** menu.
-3. Select ```Options``` to open the **Folder Options** dialog.
-4. In the **Folder Options* dialog, go to the ```View``` tab.
-5. Under ```Advanced settings```, you'll find an option that says ```Hide extensions for known file types```.
-6. Disable this option.
-7. Click ```OK``` to apply the changes.
-```
+  - Windows 11:
+    - Open File Explorer ( ```WIN``` + ```E``` )
+    - Click on the three dots icon ( ```●●●``` ) at the top to open the **More options** menu.
+    - Select **Options** to open the **Folder Options** dialog.
+    - In the **Folder Options** dialog, go to the ```View``` tab.
+    - Under **Advanced settings**, you'll find an option that says **Hide extensions for known file types**.
+    - Disable this option.
+    - Click **OK** to apply the changes.
 
-- Windows 10:
+  - Windows 10:
+    - Open File Explorer.
+    - Click on the **View** tab in the top menu (You may need to press the ALT key to show the top menu).
+    - Under **Advanced settings**, you'll find an option that says **Hide extensions for known file types**.
+    - Disable this option.
+    - Click **OK** to apply the changes.
 
-```
-1. Open File Explorer.
-2. Click on the 'View' tab in the top menu (You may need to press the ALT key to show the top menu).
-3. Under 'Advanced settings', you'll find an option that says 'Hide extensions for known file types'.
-4. Disable this option.
-5. Click 'OK' to apply the changes.
-```
-
-6. ```Right-click``` on **valheim.exe** and select **Create shortcut** then, rename the new shortcut simply to ```valheim```.
+5. ```Right-click``` on **valheim.exe** and select **Create shortcut** then, rename the new shortcut simply to ```valheim```.
 
 ![Valheim Red Circle](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-shortcut.png?raw=true)
 
-7. ```Right-click``` on the newly created, and renamed shortcut file, ```valheim```, choose **Properties**.
+6. ```Right-click``` on the newly created, and renamed shortcut file, ```valheim```, choose **Properties**.
 
-8. In the **Target field**, leave the original text intact and type the following before it making sure to leave a space between the two.
+7. In the **Target field**, leave the original text intact and type the following before it making sure to leave a space between the two.
 
 ```
 cmd /c start /high Valheim
