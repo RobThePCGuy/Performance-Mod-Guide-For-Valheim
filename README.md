@@ -34,7 +34,7 @@ Explore the guide, which is broken down into sections and designed for flexibili
   
   ![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
 
-3. **Edit `boot.config`:**
+3. **Edit** `boot.config`**:**
    - Now you can right click on it and edit the `boot.config` with your choice of [text editor](https://notepad-plus-plus.org/).
    - Press the `Enter` key to create a new line at the very top of the file.
    - Arrow up to the blank line and paste the following text at the top:
@@ -44,7 +44,8 @@ Explore the guide, which is broken down into sections and designed for flexibili
      gfx-enable-native-gfx-jobs=1
      ```
 
-4. Finally you can save and close.
+4. **Double Check:**
+   - Make sure to verify with my photo below. I took out my `build-guid` becuase I don't know if it is sensitive or not.
 
 > [!IMPORTANT]
 > Here is what your `boot.config` file should now look like:
