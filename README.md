@@ -1,68 +1,55 @@
-# Performance Mod Guide for Valheim:
+# Performance Mod Guide for Valheim
 
---- 
+This guide has served me well, and I hope it will do the same for you. Designed as a comprehensive resource for all performance-related issues in Valheim, it aims to be your go-to solution. Your feedback is crucial to keeping this guide up-to-date and useful. If you find any outdated information, errors, or if you have suggestions for improvement, please do not hesitate to reach out. You can contact me via email @ <rob@zero-one-zero.com>. I am dedicated to continually updating this guide to ensure it remains relevant and helpful to all.
 
-> This guide aims to be a one-stop shop for Valheim's performance-related issues and fixes. However, please be aware that things change, so if you see something that needs updating or fixing, please let me know. I'm always open to new ideas and will keep this guide fresh as long as it's useful. Got questions or suggestions? Feel free to reach out.
+Explore the guide, which is broken down into sections and designed for flexibility. Choose the sections that suit your needs or tackle them all for a complete experience. Embued with a mix of easy and challenging steps, you may consider reading through the entire guide first to strategize your approach.
 
-> You'll find the guide broken down into sections. You don't have to go through all of them; just pick what works for you. Whenever I come back to it after a break, I like to start from the top and do the whole thing. There's a mix of easy and tough steps here, so it's a good idea to read through the whole thing first to know what you're getting into.
-
----
+*Or, why not start at the top like I do after a break? It’s a great way to refresh your understanding.*
 
 ![Viking](https://github.com/ZeroOneZero/Valheim-Modding-and-Performance/blob/main/images/valheim-pic.png?raw=true)
 
----
+> [!NOTE]
+> While in-game, pressing ```F2``` will display a GUI with some additional information, like Frames per Second (FPS).
+> 
+> Be aware that updates to Valheim may affect the modifications suggested in this guide. Always check your game for changes after any patches to ensure that these modifications are still applicable and functioning as expected.
 
-## A Couple of Things to Note:
+# Increasing Performance
 
-> While in-game, pressing ```F2``` will display a GUI with some additional information, like FPS [Frames per Second].
+## Unlock Your GPU By Editing `boot.config`
 
-> Updating Valheim will remove the modifications we perform below on the **boot.config** file.
+> [!IMPORTANT]
+> For about 90% of systems, this simple modification can increase your frames per second (FPS). By making specific changes to this file, we shift a greater portion of the processing tasks to the Graphics Processing Unit (GPU). This adjustment reduces the workload on the Central Processing Unit (CPU), effectively easing the bottleneck. This can lead to smoother gameplay and improved performance.
 
----
+1. **Accessing Valheim Data Files:**
+   - In the Steam Library, **right-click** on **Valheim**.
+   - Navigate to `Manage` --> `Browse Local Files`.
+   - Inside of the Explorer window that should have opened you will see `valheim_Data`.
+    
+    ```
+    C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
+    ```
 
-# Increase Performance
+2. **Locate The `boot.config**:
+   - Go into the `valheim_Data` folder to locate the `boot.config` file. It'll be at the top of the directory listing.
+  
+  ![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
 
-## Modify boot.config
+3. **Edit The `boot.config`:**
+   - Now you can right click on it and edit the `boot.config` with your choice of [text editor](https://notepad-plus-plus.org/).
+   - Press the `Enter` key to create a new line at the very top of the file.
+   - Arrow up to the blank line and paste the following text at the top:
 
-> The first file to edit enables the GPU [Graphics Processing Unit] to handle more tasks, thereby reducing the load on the CPU [Central Processing Unit]
+     ```
+     gfx-enable-jobs=1
+     gfx-enable-native-gfx-jobs=1
+     ```
 
-1. In your Steam Library, ```Right-Click```, on **Valheim** and go to ```Manage```--->```Browse Local Files```.
+4. Finally you can save and close.
 
-2. Windows **Explorer** should have opened to the location of Valheim.
+> [!IMPORTANT]
+> Here is what your `boot.config` file should now look like:
 
-3. Inside the ```valheim_Data``` directory, you will find the ```boot.config``` file.
-
-```
-C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
-```
-
-![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
-
-4. Open the ```boot.config``` file in a text editor of your choice. This could be Notepad on Windows, TextEdit on macOS, or any other text editor that you prefer.
-
-> Personally, I use [Notepad++](https://notepad-plus-plus.org/).
-
-5. Once the file is open, press the ```Enter``` key (to create a new line) and move the cursor to the very beginning of the text; top line.
-
-6. Type or copy and paste the following lines at the top of the file:
-
-```
-gfx-enable-jobs=1
-gfx-enable-native-gfx-jobs=1
-```
-
-7. Save the changes to the ```boot.config``` file, then close the text editor.
-
-> Your ```boot.config``` file should now look something like this:
-
-```
-gfx-enable-jobs=1
-gfx-enable-native-gfx-jobs=1
-wait-for-native-debugger=0
-hdr-display-enabled=0
-gc-max-time-slice=3
-build-guid=xxx
-```
+![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config2.png?raw=true)
 
 ## Force Display Parameters via Steam
 
