@@ -46,11 +46,15 @@ Explore the guide, which is broken down into sections and designed for flexibili
 
 4. **Double Check:**
    - Make sure to verify with my photo below. I took out my `build-guid` becuase I don't know if it is sensitive or not.
+   - If all is well then, save and close. You have completed this section.
 
 > [!IMPORTANT]
+> You can simply `verify files` from the properties for Valheim in your Steam Libray if you think you may have doorked it up.
+> 
 > Here is what your `boot.config` file should now look like:
 
 ![boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.png?raw=true)
+
 
 ## Force Display Parameters via Steam
 
