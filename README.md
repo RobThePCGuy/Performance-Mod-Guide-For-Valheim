@@ -49,7 +49,7 @@ Explore the guide, which is broken down into sections and designed for flexibili
 > [!IMPORTANT]
 > Here is what your `boot.config` file should now look like:
 
-![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config2.png?raw=true)
+![boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/boot.config.png?raw=true)
 
 ## Force Display Parameters via Steam
 
