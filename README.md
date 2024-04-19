@@ -29,12 +29,12 @@ Explore the guide, which is broken down into sections and designed for flexibili
     C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data
     ```
 
-2. **Locate The `boot.config**:
+2. **Locate `boot.config`**:
    - Go into the `valheim_Data` folder to locate the `boot.config` file. It'll be at the top of the directory listing.
   
   ![valheim_Data boot.config](https://github.com/ZeroOneZero/Performance-Mod-Guide-For-Valheim/blob/main/images/valheim_data-boot-config.png?raw=true)
 
-3. **Edit The `boot.config`:**
+3. **Edit `boot.config`:**
    - Now you can right click on it and edit the `boot.config` with your choice of [text editor](https://notepad-plus-plus.org/).
    - Press the `Enter` key to create a new line at the very top of the file.
    - Arrow up to the blank line and paste the following text at the top:
