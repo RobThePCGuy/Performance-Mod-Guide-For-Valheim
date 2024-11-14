@@ -226,6 +226,10 @@ To force a few fixes directly we can use Steam and it's Launch Options.
 | -force-d3d12                            | Run a game using DirectX 12                         |
 | -force-vulkan                           | Directs the game to run on the Vulkan API. This can reduce CPU overhead and improve GPU efficiency, especially on newer cards.                         |
 
+Your final Steam Launch Option may look something like this:
+
+`"C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim.lnk" %command% -console -window-mode exclusive -force-vulkan`
+
 ## **Final Thoughts**
 
 These hacks and script is provided "as is" without warranty of any kind. The author is not responsible for any damage or data loss that may occur from using these. Use at your own risk.
