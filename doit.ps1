@@ -1,14 +1,10 @@
 <#
-.SYNOPSIS
     Valheim Graphics Quality Configuration Script
 
-.DESCRIPTION
     This PowerShell script modifies the performance registry entries for Valheim to adjust graphics quality settings. It creates a backup of your registry before making any changes, allowing you to revert if necessary.
 
-.PREREQUISITES
-    - PowerShell execution policy must allow script execution.
+    PowerShell execution policy must allow script execution.
 
-.USAGE
     1. Check current execution policy:
         Get-ExecutionPolicy
 
@@ -18,12 +14,9 @@
     3. To set a more permanent policy (use with caution):
         Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-.EXAMPLE
-    .\ValheimGraphicsConfig.ps1
+    .\doit.ps1
 
-.NOTES
-    - Run PowerShell as Administrator for necessary permissions.
-    - Modifying the registry can have significant effects on your system. Ensure you understand the changes being made.
+	Run PowerShell as Administrator for necessary permissions.
 #>
 
 # Valheim Graphics Quality Configuration Script (Registry Version with Backup and Restore Functionality)
@@ -142,13 +135,18 @@ function Get-Settings {
                 "PointLights_h86280452"             = 0
                 "PointLightShadows_h1759565890"     = 0
                 "DistantShadows_h1843906401"        = 0
-                "RenderScale_h2780129047"           = "0.7"  # String
+                "RenderScale_h2780129047"           = "0.6"  # String
+				"Tesselation_h3657420608"             = 0
+                "MotionBlur_h2158824370"              = 0
+                "ChromaticAberration_h1378604186"     = 0
+                "SoftPart_h3900822588"                = 0
+                "DetailedParticleSystems_h1824948119" = 0
             }
         }
         'Medium' {
             return @{
                 "GraphicsQualityMode_h1143830910" = 1   # 'Balanced' preset
-                "LodBias_h1363397339"              = 2
+                "LodBias_h1363397339"              = 3
                 "ShadowQuality_h2692908302"        = 1
                 "Bloom_h211510662"                  = 1
                 "DOF_h193444936"                    = 0
@@ -159,16 +157,21 @@ function Get-Settings {
                 "PointLights_h86280452"             = 1
                 "PointLightShadows_h1759565890"     = 1
                 "DistantShadows_h1843906401"        = 1
-                "RenderScale_h2780129047"           = "0.9"  # String
+                "RenderScale_h2780129047"           = "0.8"  # String
+				"Tesselation_h3657420608"             = 0
+                "MotionBlur_h2158824370"              = 0
+                "ChromaticAberration_h1378604186"     = 0
+                "SoftPart_h3900822588"                = 0
+                "DetailedParticleSystems_h1824948119" = 0
             }
         }
         'High' {
             return @{
                 "GraphicsQualityMode_h1143830910" = 2   # 'High' preset
-                "LodBias_h1363397339"              = 3
+                "LodBias_h1363397339"              = 5
                 "ShadowQuality_h2692908302"        = 2
                 "Bloom_h211510662"                  = 1
-                "DOF_h193444936"                    = 1
+                "DOF_h193444936"                    = 0
                 "SSAO_h2089437707"                  = 1
                 "SunShafts_h4174787446"            = 1
                 "AntiAliasing_h2021560769"         = 1
@@ -177,15 +180,20 @@ function Get-Settings {
                 "PointLightShadows_h1759565890"     = 2
                 "DistantShadows_h1843906401"        = 1
                 "RenderScale_h2780129047"           = "1.0"  # String
+				"Tesselation_h3657420608"             = 1
+                "MotionBlur_h2158824370"              = 0
+                "ChromaticAberration_h1378604186"     = 0
+                "SoftPart_h3900822588"                = 1
+                "DetailedParticleSystems_h1824948119" = 1
             }
         }
         'Ultra' {
             return @{
                 "GraphicsQualityMode_h1143830910"    = 3   # 'Ultra' preset
-                "LodBias_h1363397339"                = 5
+                "LodBias_h1363397339"                = 8
                 "ShadowQuality_h2692908302"          = 3
                 "Bloom_h211510662"                    = 1
-                "DOF_h193444936"                      = 1
+                "DOF_h193444936"                      = 0
                 "SSAO_h2089437707"                    = 1
                 "SunShafts_h4174787446"              = 1
                 "AntiAliasing_h2021560769"           = 2
@@ -193,10 +201,10 @@ function Get-Settings {
                 "PointLights_h86280452"               = 3
                 "PointLightShadows_h1759565890"       = 3
                 "DistantShadows_h1843906401"          = 1
-                "RenderScale_h2780129047"             = "1.5"  # String
+                "RenderScale_h2780129047"             = "1.2"  # String
                 "Tesselation_h3657420608"             = 1
-                "MotionBlur_h2158824370"              = 1
-                "ChromaticAberration_h1378604186"     = 1
+                "MotionBlur_h2158824370"              = 0
+                "ChromaticAberration_h1378604186"     = 0
                 "SoftPart_h3900822588"                = 1
                 "DetailedParticleSystems_h1824948119" = 1
             }
