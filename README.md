@@ -152,13 +152,21 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 3. **Navigate to the Script Directory**:
 
    ```powershell
-   cd path\to\your\script
+   #Powershell
+   cd $Env:UserProfile\Downloads
+   
+   #CMD
+   cd %UserProfile%\Downloads
    ```
 
 4. **Execute the Script**:
 
    ```powershell
-   .\ValheimGraphicsConfig.ps1
+   #Powershell
+   .\doit.ps1
+   
+   #CMD
+   powershell .\doit.ps1
    ```
 
 #### Options
