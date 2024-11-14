@@ -146,7 +146,7 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
 ### Run the Script
 
-1. **Download the Script**: Save the script file (`ValheimGraphicsConfig.ps1`) to a convenient location on your computer.
+1. **Download the Script**: Save the script file [doit.ps1](https://github.com/RobThePCGuy/Performance-Mod-Guide-For-Valheim/blob/a4ce914d6c542ee95a6d81d18709d5b261d7aefd/doit.ps1) to a convenient location on your computer.
 2. **Open PowerShell as Administrator**:
    - Press `Win + X` and select **Windows PowerShell (Admin)** or **Windows Terminal (Admin)**.
 3. **Navigate to the Script Directory**:
