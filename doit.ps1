@@ -1,25 +1,5 @@
-<#
-    Valheim Graphics Quality Configuration Script
-
-    This PowerShell script modifies the performance registry entries for Valheim to adjust graphics quality settings. It creates a backup of your registry before making any changes, allowing you to revert if necessary.
-
-    PowerShell execution policy must allow script execution.
-
-    1. Check current execution policy:
-        Get-ExecutionPolicy
-
-    2. To allow script execution for the current session:
-        Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
-
-    3. To set a more permanent policy (use with caution):
-        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-    .\doit.ps1
-
-	Run PowerShell as Administrator for necessary permissions.
-#>
-
-# Valheim Graphics Quality Configuration Script (Registry Version with Backup and Restore Functionality)
+# WORK IN PROGRESS - USE ONLY IF YOU KNOW WHAT IT DOES: LOD Bias is not setting correctly. I'm not sure why. Any help would be great!
+# Valheim Graphics Quality Configuration Script (Updated Version)
 
 # Constants
 $RegistryPath = "HKCU:\Software\IronGate\Valheim"
@@ -50,13 +30,13 @@ function Get-RecommendedQuality {
     )
 
     if ($RamSizeGB -lt 8) {
-        return 'Low'
+        return 'VeryLow'
     } elseif ($RamSizeGB -lt 16) {
-        return 'Medium'
+        return 'Balanced'
     } elseif ($RamSizeGB -lt 32) {
-        return 'High'
+        return 'Quality'
     } else {
-        return 'Ultra'
+        return 'Custom'
     }
 }
 
@@ -72,22 +52,21 @@ function Get-UserQualityChoice {
 
     # Suggest quality level based on RAM
     $ramSize = [int]$systemSpecs.RAM
-    $recommendedLevel = if ($ramSize -lt 8) { 'Low' } elseif ($ramSize -lt 16) { 'Medium' } elseif ($ramSize -lt 32) { 'High' } else { 'Ultra' }
+    $recommendedLevel = Get-RecommendedQuality -RamSizeGB $ramSize
     $recommendedChoice = switch ($recommendedLevel) {
-        'Low'    { '1' }
-        'Medium' { '2' }
-        'High'   { '3' }
-        'Ultra'  { '4' }
+        'VeryLow' { '1' }
+        'Balanced' { '2' }
+        'Quality' { '3' }
+        'Custom' { '4' }
     }
-
 
     Write-Host "Recommended Graphics Quality Level: $recommendedLevel"
     Write-Host ""
     Write-Host "Choose your preferred graphics quality level:"
-    Write-Host "1. Low    - Optimizes for performance"
-    Write-Host "2. Medium - Balanced"
-    Write-Host "3. High   - Optimizes for visuals"
-    Write-Host "4. Ultra  - Maximum settings for high-end systems"
+    Write-Host "1. Very Low - Optimizes for performance"
+    Write-Host "2. Balanced - Balanced"
+    Write-Host "3. Quality  - Optimizes for visuals"
+    Write-Host "4. Custom   - Customize individual settings"
     Write-Host "(Press Enter to select the recommended option: $recommendedLevel)"
     Write-Host ""
 
@@ -104,10 +83,10 @@ function Get-UserQualityChoice {
     }
 
     switch ($input) {
-        '1' { return 'Low' }
-        '2' { return 'Medium' }
-        '3' { return 'High' }
-        '4' { return 'Ultra' }
+        '1' { return 'VeryLow' }
+        '2' { return 'Balanced' }
+        '3' { return 'Quality' }
+        '4' { return 'Custom' }
         default { return $recommendedLevel }  # Fallback to recommended
     }
 }
@@ -116,97 +95,111 @@ function Get-UserQualityChoice {
 function Get-Settings {
     param (
         [Parameter(Mandatory)]
-        [ValidateSet('Low', 'Medium', 'High', 'Ultra')]
+        [ValidateSet('VeryLow', 'Balanced', 'Quality', 'Custom')]
         [string]$Level
     )
 
     switch ($Level) {
-        'Low' {
+        'VeryLow' {
             return @{
-                "GraphicsQualityMode_h1143830910" = 0   # 'Very Low' preset
-                "LodBias_h1363397339"              = 1
-                "ShadowQuality_h2692908302"        = 0
-                "Bloom_h211510662"                  = 0
-                "DOF_h193444936"                    = 0
-                "SSAO_h2089437707"                  = 0
-                "SunShafts_h4174787446"            = 0
-                "AntiAliasing_h2021560769"         = 0
-                "ClutterQuality_h3068748133"        = 0
-                "PointLights_h86280452"             = 0
-                "PointLightShadows_h1759565890"     = 0
-                "DistantShadows_h1843906401"        = 0
-                "RenderScale_h2780129047"           = "0.6"  # String
-				"Tesselation_h3657420608"             = 0
-                "MotionBlur_h2158824370"              = 0
-                "ChromaticAberration_h1378604186"     = 0
-                "SoftPart_h3900822588"                = 0
-                "DetailedParticleSystems_h1824948119" = 0
+                "GraphicsQualityMode_h1143830910"    = 0                       # Very Low preset
+                "AntiAliasing_h2021560769"           = 0
+                "Bloom_h211510662"                   = 0
+                "ClutterQuality_h3068748133"         = 0
+                "DOF_h193444936"                     = 0
+                "DistantShadows_h1843906401"         = 0
+                "FPSLimit_h2286199605"               = 60                      # Set to 60 FPS
+                "Lights_h2893141000"                 = 1
+                "LodBias_h1363397339"                = 1
+                "MotionBlur_h2158824370"             = 0
+                "PointLights_h86280452"              = 0
+                "PointLightShadows_h1759565890"      = 0
+                "RenderScale_h2780129047"            = 0.6
+                "ShadowQuality_h2692908302"          = 0
+                "SSAO_h2089437707"                   = 0
+                "SunShafts_h4174787446"              = 0
+                "Tesselation_h3657420608"            = 0
+                "VSync_h223806132"                   = 1
+                "SoftPart_h3900822588"               = 0
+                "DetailedParticleSystems_h1824948119"= 0
+                "ChromaticAberration_h1378604186"    = 0
             }
         }
-        'Medium' {
+        'Balanced' {
             return @{
-                "GraphicsQualityMode_h1143830910" = 1   # 'Balanced' preset
-                "LodBias_h1363397339"              = 3
-                "ShadowQuality_h2692908302"        = 1
-                "Bloom_h211510662"                  = 1
-                "DOF_h193444936"                    = 0
-                "SSAO_h2089437707"                  = 1
-                "SunShafts_h4174787446"            = 1
-                "AntiAliasing_h2021560769"         = 1
-                "ClutterQuality_h3068748133"        = 1
-                "PointLights_h86280452"             = 1
-                "PointLightShadows_h1759565890"     = 1
-                "DistantShadows_h1843906401"        = 1
-                "RenderScale_h2780129047"           = "0.8"  # String
-				"Tesselation_h3657420608"             = 0
-                "MotionBlur_h2158824370"              = 0
-                "ChromaticAberration_h1378604186"     = 0
-                "SoftPart_h3900822588"                = 0
-                "DetailedParticleSystems_h1824948119" = 0
-            }
-        }
-        'High' {
-            return @{
-                "GraphicsQualityMode_h1143830910" = 2   # 'High' preset
-                "LodBias_h1363397339"              = 5
-                "ShadowQuality_h2692908302"        = 2
-                "Bloom_h211510662"                  = 1
-                "DOF_h193444936"                    = 0
-                "SSAO_h2089437707"                  = 1
-                "SunShafts_h4174787446"            = 1
-                "AntiAliasing_h2021560769"         = 1
-                "ClutterQuality_h3068748133"        = 2
-                "PointLights_h86280452"             = 2
-                "PointLightShadows_h1759565890"     = 2
-                "DistantShadows_h1843906401"        = 1
-                "RenderScale_h2780129047"           = "1.0"  # String
-				"Tesselation_h3657420608"             = 1
-                "MotionBlur_h2158824370"              = 0
-                "ChromaticAberration_h1378604186"     = 0
-                "SoftPart_h3900822588"                = 1
-                "DetailedParticleSystems_h1824948119" = 1
-            }
-        }
-        'Ultra' {
-            return @{
-                "GraphicsQualityMode_h1143830910"    = 3   # 'Ultra' preset
-                "LodBias_h1363397339"                = 8
-                "ShadowQuality_h2692908302"          = 3
-                "Bloom_h211510662"                    = 1
-                "DOF_h193444936"                      = 0
-                "SSAO_h2089437707"                    = 1
+                "GraphicsQualityMode_h1143830910"    = 1                       # Balanced preset
+                "AntiAliasing_h2021560769"           = 1
+                "Bloom_h211510662"                   = 1
+                "ClutterQuality_h3068748133"         = 1
+                "DOF_h193444936"                     = 0
+                "DistantShadows_h1843906401"         = 1
+                "FPSLimit_h2286199605"               = 60                      # Set to 60 FPS
+                "Lights_h2893141000"                 = 2
+                "LodBias_h1363397339"                = 3
+                "MotionBlur_h2158824370"             = 0
+                "PointLights_h86280452"              = 1
+                "PointLightShadows_h1759565890"      = 1
+                "RenderScale_h2780129047"            = 0.8
+                "ShadowQuality_h2692908302"          = 1
+                "SSAO_h2089437707"                   = 1
                 "SunShafts_h4174787446"              = 1
+                "Tesselation_h3657420608"            = 0
+                "VSync_h223806132"                   = 1
+                "SoftPart_h3900822588"               = 0
+                "DetailedParticleSystems_h1824948119"= 0
+                "ChromaticAberration_h1378604186"    = 0
+            }
+        }
+        'Quality' {
+            return @{
+                "GraphicsQualityMode_h1143830910"    = 2                       # Quality preset
+                "AntiAliasing_h2021560769"           = 1
+                "Bloom_h211510662"                   = 1
+                "ClutterQuality_h3068748133"         = 2
+                "DOF_h193444936"                     = 0
+                "DistantShadows_h1843906401"         = 1
+                "FPSLimit_h2286199605"               = 60                      # Set to 60 FPS
+                "Lights_h2893141000"                 = 2
+                "LodBias_h1363397339"                = 5
+                "MotionBlur_h2158824370"             = 0
+                "PointLights_h86280452"              = 2
+                "PointLightShadows_h1759565890"      = 2
+                "RenderScale_h2780129047"            = 1.0
+                "ShadowQuality_h2692908302"          = 2
+                "SSAO_h2089437707"                   = 1
+                "SunShafts_h4174787446"              = 1
+                "Tesselation_h3657420608"            = 1
+                "VSync_h223806132"                   = 1
+                "SoftPart_h3900822588"               = 1
+                "DetailedParticleSystems_h1824948119"= 1
+                "ChromaticAberration_h1378604186"    = 0
+            }
+        }
+        'Custom' {
+            return @{
+                "GraphicsQualityMode_h1143830910"    = 100                     # Custom mode
+                # Here, you can define custom settings or prompt the user for each
+                # For simplicity, we'll use 'Ultra' settings as a base
                 "AntiAliasing_h2021560769"           = 2
-                "ClutterQuality_h3068748133"          = 3
-                "PointLights_h86280452"               = 3
-                "PointLightShadows_h1759565890"       = 3
-                "DistantShadows_h1843906401"          = 1
-                "RenderScale_h2780129047"             = "1.2"  # String
-                "Tesselation_h3657420608"             = 1
-                "MotionBlur_h2158824370"              = 0
-                "ChromaticAberration_h1378604186"     = 0
-                "SoftPart_h3900822588"                = 1
-                "DetailedParticleSystems_h1824948119" = 1
+                "Bloom_h211510662"                   = 1
+                "ClutterQuality_h3068748133"         = 3
+                "DOF_h193444936"                     = 0
+                "DistantShadows_h1843906401"         = 1
+                "FPSLimit_h2286199605"               = 60                      # Set to 60 FPS
+                "Lights_h2893141000"                 = 3
+                "LodBias_h1363397339"                = 8
+                "MotionBlur_h2158824370"             = 0
+                "PointLights_h86280452"              = 3
+                "PointLightShadows_h1759565890"      = 3
+                "RenderScale_h2780129047"            = 1.2
+                "ShadowQuality_h2692908302"          = 3
+                "SSAO_h2089437707"                   = 1
+                "SunShafts_h4174787446"              = 1
+                "Tesselation_h3657420608"            = 1
+                "VSync_h223806132"                   = 1
+                "SoftPart_h3900822588"               = 1
+                "DetailedParticleSystems_h1824948119"= 1
+                "ChromaticAberration_h1378604186"    = 0
             }
         }
         default {
@@ -234,7 +227,6 @@ function Backup-RegistryKey {
     }
 }
 
-
 # Function to ensure the backup directory exists
 function Ensure-BackupDirectory {
     if (!(Test-Path -Path $BackupDirectory)) {
@@ -248,31 +240,103 @@ function Ensure-BackupDirectory {
     }
 }
 
-# Function to list available backups
-function List-Backups {
+# Function to apply settings to the registry
+function Apply-Settings {
     param (
         [Parameter(Mandatory)]
-        [string]$BackupDir
+        [hashtable]$Settings
     )
+    try {
+        # Verify registry key exists or create it
+        if (!(Test-Path -Path $RegistryPath)) {
+            try {
+                New-Item -Path $RegistryPath -Force | Out-Null
+                Write-Host "Created registry key at $RegistryPath." -ForegroundColor Green
+            } catch {
+                Write-Error "Failed to create registry key: $_"
+                exit 1
+            }
+        }
 
-    if (!(Test-Path -Path $BackupDir)) {
-        Write-Host "No backup directory found at $BackupDir." -ForegroundColor Yellow
-        return @()
+        # Ensure backup directory exists
+        Ensure-BackupDirectory
+
+        # Create a timestamped backup
+        $timestamp = Get-Date -Format "yyyyMMddHHmmss"
+        $backupPath = Join-Path -Path $BackupDirectory -ChildPath "ValheimRegistryBackup_$timestamp.reg"
+        Backup-RegistryKey -RegistryPath $RegistryPath -BackupPath $backupPath
+
+        # Apply each setting
+        foreach ($key in $Settings.Keys) {
+            $value = $Settings[$key]
+            $valueType = $value.GetType().Name
+
+            # Apply the registry value based on its type
+            switch ($valueType) {
+                'Int32' {
+                    Set-ItemProperty -Path $RegistryPath -Name $key -Value $value -Type DWord -ErrorAction Stop
+                }
+                'UInt32' {
+                    Set-ItemProperty -Path $RegistryPath -Name $key -Value $value -Type DWord -ErrorAction Stop
+                }
+                'Double' {
+                    # Convert double to byte array (Little Endian)
+                    $bytes = [BitConverter]::GetBytes([double]$value)
+                    Set-ItemProperty -Path $RegistryPath -Name $key -Value $bytes -Type Binary -ErrorAction Stop
+                }
+                'String' {
+                    Set-ItemProperty -Path $RegistryPath -Name $key -Value $value -Type String -ErrorAction Stop
+                }
+                default {
+                    Write-Warning "Unhandled data type for $key{$valueType}"
+                }
+            }
+        }
+        Write-Host "Settings applied successfully." -ForegroundColor Green
+
+    } catch {
+        Write-Error "Failed to apply settings: $_"
     }
+}
 
-    $backups = Get-ChildItem -Path $BackupDir -Filter "*.reg" | Sort-Object LastWriteTime -Descending
-    if ($backups.Count -eq 0) {
-        Write-Host "No backup files found in $BackupDir." -ForegroundColor Yellow
-        return @()
+# Main Execution
+while ($true) {
+    Write-Host "========================================" -ForegroundColor Green
+    Write-Host " Valheim Graphics Quality Configuration " -ForegroundColor Green
+    Write-Host "========================================" -ForegroundColor Green
+    Write-Host ""
+    Write-Host "Please choose an option:"
+    Write-Host "1. Apply New Graphics Quality Settings"
+    Write-Host "2. Restore Graphics Settings from Backup"
+    Write-Host "3. Exit"
+    Write-Host ""
+
+    $userChoice = Read-Host "Enter your choice (1, 2, or 3)"
+    Write-Host ""
+
+    switch ($userChoice) {
+        '1' {
+            # Apply new settings
+            $qualityLevel = Get-UserQualityChoice
+            Write-Host "Selected Graphics Quality Level: $qualityLevel" -ForegroundColor Cyan
+            $settings = Get-Settings -Level $qualityLevel
+            Apply-Settings -Settings $settings
+            Write-Host ""
+        }
+        '2' {
+            # Restore from backup
+            Restore-Settings -RegistryPath $RegistryPath -BackupDir $BackupDirectory
+            Write-Host ""
+        }
+        '3' {
+            Write-Host "Exiting the script. Goodbye!" -ForegroundColor Green
+            exit
+        }
+        default {
+            Write-Host "Invalid choice. Please select 1, 2, or 3." -ForegroundColor Yellow
+            Write-Host ""
+        }
     }
-
-    Write-Host "Available Backups:"
-    for ($i = 0; $i -lt $backups.Count; $i++) {
-        $backup = $backups[$i]
-        Write-Host "$($i + 1). $($backup.Name) (Created on $($backup.LastWriteTime))"
-    }
-
-    return $backups
 }
 
 # Function to restore settings from a backup
@@ -286,10 +350,16 @@ function Restore-Settings {
     )
 
     # List available backups
-    $backups = List-Backups -BackupDir $BackupDir
+    $backups = Get-ChildItem -Path $BackupDir -Filter "*.reg" | Sort-Object LastWriteTime -Descending
     if ($backups.Count -eq 0) {
         Write-Host "No backups available to restore." -ForegroundColor Yellow
         return
+    }
+
+    Write-Host "Available Backups:"
+    for ($i = 0; $i -lt $backups.Count; $i++) {
+        $backup = $backups[$i]
+        Write-Host "$($i + 1). $($backup.Name) (Created on $($backup.LastWriteTime))"
     }
 
     Write-Host ""
@@ -350,98 +420,5 @@ function Restore-Settings {
         Write-Host "Registry settings restored successfully from $selectedBackup." -ForegroundColor Green
     } catch {
         Write-Error "Failed to restore registry settings: $_"
-    }
-}
-
-# Function to display the main menu
-function Show-MainMenu {
-    Write-Host "========================================" -ForegroundColor Green
-    Write-Host " Valheim Graphics Quality Configuration " -ForegroundColor Green
-    Write-Host "========================================" -ForegroundColor Green
-    Write-Host ""
-    Write-Host "Please choose an option:"
-    Write-Host "1. Apply New Graphics Quality Settings"
-    Write-Host "2. Restore Graphics Settings from Backup"
-    Write-Host "3. Exit"
-    Write-Host ""
-}
-
-# Function to apply settings to the registry
-function Apply-Settings {
-    param (
-        [Parameter(Mandatory)]
-        [hashtable]$Settings
-    )
-    try {
-        # Verify registry key exists
-        if (!(Test-Path -Path $RegistryPath)) {
-            Write-Error "Registry key not found at $RegistryPath. Please check the path."
-            exit 1
-        }
-
-        # Ensure backup directory exists
-        Ensure-BackupDirectory
-
-        # Create a timestamped backup
-        $timestamp = Get-Date -Format "yyyyMMddHHmmss"
-        $backupPath = Join-Path -Path $BackupDirectory -ChildPath "ValheimRegistryBackup_$timestamp.reg"
-        Backup-RegistryKey -RegistryPath $RegistryPath -BackupPath $backupPath
-
-        # Apply each setting
-        foreach ($key in $Settings.Keys) {
-            $value = $Settings[$key]
-            $valueType = $value.GetType().Name
-
-            # Apply the registry value based on its type
-            switch ($valueType) {
-                'Int32' {
-                    Set-ItemProperty -Path $RegistryPath -Name $key -Value $value -Type DWord -ErrorAction Stop
-                }
-                'String' {
-                    Set-ItemProperty -Path $RegistryPath -Name $key -Value $value -Type String -ErrorAction Stop
-                }
-                default {
-                    Write-Warning "Unhandled data type for $key{$valueType}"
-                }
-            }
-        }
-        Write-Host "Settings applied successfully." -ForegroundColor Green
-
-    } catch {
-        Write-Error "Failed to apply settings: $_"
-    }
-}
-
-# Function to restore settings from a backup (duplicate removed since it's already defined above)
-# Removed to prevent duplication
-
-# Main Execution
-while ($true) {
-    Show-MainMenu
-    $userChoice = Read-Host "Enter your choice (1, 2, or 3)"
-    Write-Host ""
-
-    switch ($userChoice) {
-        '1' {
-            # Apply new settings
-            $qualityLevel = Get-UserQualityChoice
-            Write-Host "Selected Graphics Quality Level: $qualityLevel" -ForegroundColor Cyan
-            $settings = Get-Settings -Level $qualityLevel
-            Apply-Settings -Settings $settings
-            Write-Host ""
-        }
-        '2' {
-            # Restore from backup
-            Restore-Settings -RegistryPath $RegistryPath -BackupDir $BackupDirectory
-            Write-Host ""
-        }
-        '3' {
-            Write-Host "Exiting the script. Goodbye!" -ForegroundColor Green
-            exit
-        }
-        default {
-            Write-Host "Invalid choice. Please select 1, 2, or 3." -ForegroundColor Yellow
-            Write-Host ""
-        }
     }
 }
