@@ -117,7 +117,7 @@ If you're using an Nvidia GPU, tweak settings for Valheim to get an extra FPS bo
 
 ## **Section 7: Valheim Graphics Quality Configuration Script**
 
-Welcome to the **Valheim Graphics Quality Configuration Script**! This PowerShell script allows you to easily adjust the graphics quality settings of Valheim by modifying specific registry entries. It also provides backup and restore functionality, ensuring that you can revert to previous settings if needed.
+BE AWARE THIS IS A WIP: ANY HELP WOULD BE GREAT. LODBias seems to be screwy.
 
 ### Features
 - **Adjust Graphics Quality**: Choose from Low, Medium, High, or Ultra presets to optimize Valheim's graphics settings for your system.
@@ -146,7 +146,7 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
 ### Run the Script
 
-1. **Download the Script**: Save the script file [doit.ps1](https://github.com/RobThePCGuy/Performance-Mod-Guide-For-Valheim/blob/a4ce914d6c542ee95a6d81d18709d5b261d7aefd/doit.ps1) to a convenient location on your computer.
+1. **Download the Script**: Save the script file [doit.ps1](doit.ps1) to a convenient location on your computer.
 2. **Open PowerShell as Administrator**:
    - Press `Win + X` and select **Windows PowerShell (Admin)** or **Windows Terminal (Admin)**.
 3. **Navigate to the Script Directory**:
