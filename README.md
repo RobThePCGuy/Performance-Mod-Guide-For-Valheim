@@ -155,25 +155,25 @@ If you're using an Nvidia GPU, tweak settings for Valheim to get an extra FPS bo
 - **Restore Capability**: Easily restore previous graphics settings from backups.
 - **User-Friendly Interface**: Interactive menu-driven script that's simple to use, even for those unfamiliar with PowerShell.
 
-1. Run PowerShell as Administrator.
+1. Open a normal (non-elevated) PowerShell window.
 
    - Press `Win` + `S`, and type `powershell`.
-   - `Right-Click` on the search entry for `powershell`, and from the menu, select `Run as administrator`.
+   - Click `Windows PowerShell`. Do **not** choose `Run as administrator` — this script only changes your own per-user settings and does not need it.
 
-2. Copy and Paste One or the Other:
- 
-   The following code will allow remote script execution and execute my script without the need to download it.
+2. Download the script, review it, then run it.
 
-     ```powershell
-     #One
-     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force; Invoke-RestMethod "https://raw.githubusercontent.com/RobThePCGuy/Performance-Mod-Guide-For-Valheim/main/doit.ps1" | Invoke-Expression
-     ```
-
-   OR: This will run the script as Administrator, allow remote script execution, and execute my script without the need to download it.
+   Downloading the script first (instead of piping it straight from the internet into `Invoke-Expression`) lets you read exactly what it does before it runs on your machine.
 
      ```powershell
-     #the Other
-     Start-Process PowerShell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force; Invoke-RestMethod 'https://raw.githubusercontent.com/RobThePCGuy/Performance-Mod-Guide-For-Valheim/main/doit.ps1' | Invoke-Expression" -Verb RunAs
+     # 1) Download the script to your Desktop
+     Invoke-RestMethod "https://raw.githubusercontent.com/RobThePCGuy/Performance-Mod-Guide-For-Valheim/main/doit.ps1" -OutFile "$env:USERPROFILE\Desktop\doit.ps1"
+
+     # 2) Open it and read through it so you know exactly what it does
+     notepad "$env:USERPROFILE\Desktop\doit.ps1"
+
+     # 3) When you're happy with it, allow scripts for this session only and run it
+     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+     & "$env:USERPROFILE\Desktop\doit.ps1"
      ```
 
 3. When you run the script, you'll be presented with a menu.
@@ -202,7 +202,7 @@ If you're using an Nvidia GPU, tweak settings for Valheim to get an extra FPS bo
 > You can manually restore a backup by double-clicking the `.reg` file and following the prompts.
 
 > [!IMPORTANT]
-> Modifying the registry requires administrative privileges. Ensure you run PowerShell as Administrator.
+> This script only changes your own per-user registry (`HKCU`) and writes backups to your Desktop, so it does **not** require administrator privileges — run it in a normal, non-elevated PowerShell window. Elevating can send the changes to a different account's registry hive, so Valheim won't pick them up.
 > Ensure that Valheim is not running while you apply new settings or restore backups.
 
 ---
