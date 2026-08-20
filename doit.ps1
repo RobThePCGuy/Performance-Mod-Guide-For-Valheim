@@ -299,46 +299,6 @@ function Apply-Settings {
     }
 }
 
-# Main Execution
-while ($true) {
-    Write-Host "========================================" -ForegroundColor Green
-    Write-Host " Valheim Graphics Quality Configuration " -ForegroundColor Green
-    Write-Host "========================================" -ForegroundColor Green
-    Write-Host ""
-    Write-Host "Please choose an option:"
-    Write-Host "1. Apply New Graphics Quality Settings"
-    Write-Host "2. Restore Graphics Settings from Backup"
-    Write-Host "3. Exit"
-    Write-Host ""
-
-    $userChoice = Read-Host "Enter your choice (1, 2, or 3)"
-    Write-Host ""
-
-    switch ($userChoice) {
-        '1' {
-            # Apply new settings
-            $qualityLevel = Get-UserQualityChoice
-            Write-Host "Selected Graphics Quality Level: $qualityLevel" -ForegroundColor Cyan
-            $settings = Get-Settings -Level $qualityLevel
-            Apply-Settings -Settings $settings
-            Write-Host ""
-        }
-        '2' {
-            # Restore from backup
-            Restore-Settings -RegistryPath $RegistryPath -BackupDir $BackupDirectory
-            Write-Host ""
-        }
-        '3' {
-            Write-Host "Exiting the script. Goodbye!" -ForegroundColor Green
-            exit
-        }
-        default {
-            Write-Host "Invalid choice. Please select 1, 2, or 3." -ForegroundColor Yellow
-            Write-Host ""
-        }
-    }
-}
-
 # Function to restore settings from a backup
 function Restore-Settings {
     param (
@@ -420,5 +380,45 @@ function Restore-Settings {
         Write-Host "Registry settings restored successfully from $selectedBackup." -ForegroundColor Green
     } catch {
         Write-Error "Failed to restore registry settings: $_"
+    }
+}
+
+# Main Execution
+while ($true) {
+    Write-Host "========================================" -ForegroundColor Green
+    Write-Host " Valheim Graphics Quality Configuration " -ForegroundColor Green
+    Write-Host "========================================" -ForegroundColor Green
+    Write-Host ""
+    Write-Host "Please choose an option:"
+    Write-Host "1. Apply New Graphics Quality Settings"
+    Write-Host "2. Restore Graphics Settings from Backup"
+    Write-Host "3. Exit"
+    Write-Host ""
+
+    $userChoice = Read-Host "Enter your choice (1, 2, or 3)"
+    Write-Host ""
+
+    switch ($userChoice) {
+        '1' {
+            # Apply new settings
+            $qualityLevel = Get-UserQualityChoice
+            Write-Host "Selected Graphics Quality Level: $qualityLevel" -ForegroundColor Cyan
+            $settings = Get-Settings -Level $qualityLevel
+            Apply-Settings -Settings $settings
+            Write-Host ""
+        }
+        '2' {
+            # Restore from backup
+            Restore-Settings -RegistryPath $RegistryPath -BackupDir $BackupDirectory
+            Write-Host ""
+        }
+        '3' {
+            Write-Host "Exiting the script. Goodbye!" -ForegroundColor Green
+            exit
+        }
+        default {
+            Write-Host "Invalid choice. Please select 1, 2, or 3." -ForegroundColor Yellow
+            Write-Host ""
+        }
     }
 }
