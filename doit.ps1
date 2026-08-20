@@ -266,10 +266,24 @@ function Apply-Settings {
         $backupPath = Join-Path -Path $BackupDirectory -ChildPath "ValheimRegistryBackup_$timestamp.reg"
         Backup-RegistryKey -RegistryPath $RegistryPath -BackupPath $backupPath
 
+        # Unity stores PlayerPrefs floats on Windows as a REG_DWORD whose 32-bit
+        # value is the IEEE-754 float32 bit pattern (regedit shows these as
+        # "(invalid DWORD)"). RenderScale and LodBias are Unity floats, so both
+        # must be encoded this way regardless of whether PowerShell typed the
+        # preset value as a Double or an Int32.
+        $FloatPrefs = @('RenderScale_h2780129047', 'LodBias_h1363397339')
+
         # Apply each setting
         foreach ($key in $Settings.Keys) {
             $value = $Settings[$key]
             $valueType = $value.GetType().Name
+
+            if ($FloatPrefs -contains $key) {
+                # Reinterpret the float32 bytes as a UInt32 and store as REG_DWORD.
+                $floatBits = [BitConverter]::ToUInt32([BitConverter]::GetBytes([float]$value), 0)
+                Set-ItemProperty -Path $RegistryPath -Name $key -Value $floatBits -Type DWord -ErrorAction Stop
+                continue
+            }
 
             # Apply the registry value based on its type
             switch ($valueType) {
